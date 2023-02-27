@@ -1,4 +1,8 @@
 .navbar {
   height: 64px;
-  background-color: rebeccapurple;
+  background-color: white;
+}
+
+.logo {
+  height: 56px;
 }
