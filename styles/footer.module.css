@@ -3,10 +3,12 @@
   display: flex;
   width: fit-content;
   max-width: 1280px;
+  flex-wrap: wrap;
 }
 
 .container > div {
   margin-right: 3em;
+
 }
 
 .container ul {
@@ -17,7 +19,7 @@
 }
 
 .container li {
-  --padding-top-bot: 8px;
+  --padding-top-bot: 6px;
   padding-top: var(--padding-top-bot);
   padding-bottom: var(--padding-top-bot);
 }
@@ -25,4 +27,5 @@
 .container h4 {
   margin-top: 0;
   margin-bottom: 0;
+  margin-top: 18px;
 }
