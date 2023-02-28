@@ -1,0 +1,9 @@
+.image {
+  object-fit: cover;
+}
+
+.root {
+  height: calc(100vh - var(--navbar-height));
+  background-color: aquamarine;
+  position: relative;
+}

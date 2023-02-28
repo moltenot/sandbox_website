@@ -1,5 +1,5 @@
 .navbar {
-  height: 64px;
+  height: var(--navbar-height);
   background-color: white;
 }
 
