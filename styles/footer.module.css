@@ -1,0 +1,26 @@
+.container {
+  padding: 2em;
+  display: flex;
+  width: fit-content;
+  max-width: 1280px;
+}
+
+.container > div {
+  margin-right: 3em;
+}
+
+.container ul {
+  list-style-position: outside;
+  list-style-type: square;
+  padding-left: 10px;
+}
+
+.container li {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.container h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}

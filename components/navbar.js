@@ -1,5 +1,6 @@
 import styles from "@/styles/Navbar.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../public/black_logo.png";
 import NavLink from "./navlink";
 
@@ -14,7 +15,9 @@ export default function Navbar() {
       <div className="padder" />
       <div>
         <div className="max-width-large hflex">
-          <Image src={logo} alt="Sandbox Studios Logo" height={50} />
+          <Link href={"/"}>
+            <Image src={logo} alt="Sandbox Studios Logo" height={50} />
+          </Link>
           <div className="flex-pad full-width" />
           {paths.map(NavLink)}
         </div>
