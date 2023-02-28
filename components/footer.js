@@ -19,7 +19,7 @@ export default function Footer() {
               Zealand
             </li>
             <li> <Link href={"tel:0800 788346"}>0800 STUDIO</Link>
-              <br /> <Link href={"0800 788346"}>0800 788346</Link>
+              <br /> <Link href={"tel:0800 788346"}>0800 788346</Link>
             </li>
             <li>
               <Link href={" https://sandboxstudio.co.nz/"}>
