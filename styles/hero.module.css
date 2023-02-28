@@ -1,9 +1,37 @@
 .image {
   object-fit: cover;
+  filter: brightness(0.9);
 }
 
 .root {
   height: calc(100vh - var(--navbar-height));
   background-color: aquamarine;
   position: relative;
+}
+
+.container {
+  color: white;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.container > div {
+  margin: auto;
+  width: fit-content;
+  height: 100%;
+}
+
+.container h1 {
+  font-size: 5rem;
+  line-height: 1em;
+  font-weight: 900;
+  translate: 0 calc(var(--navbar-height) * -1);
+}
+
+.small {
+  font-size: 0.8em;
+  font-style: italic;
 }
