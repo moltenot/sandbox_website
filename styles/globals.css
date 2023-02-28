@@ -11,6 +11,16 @@ body {
   font-family: var(--krub-font);
 }
 
+.hoverable:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hoverable {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  text-decoration: none;
+}
+
 .flex-pad {
   flex: auto;
 }

@@ -6,3 +6,31 @@
 .logo {
   height: 56px;
 }
+
+.burger {
+  cursor: pointer;
+  display: none;
+}
+
+.navlinkcontainer {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 480px) {
+  .burger {
+    display: block;
+  }
+
+  .navlinkcontainer {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    translate: 0 var(--navbar-height);
+    top: 0;
+    /* display: none; */
+    padding-bottom: 0.5em;
+  }
+}

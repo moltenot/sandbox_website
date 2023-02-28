@@ -3,8 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/black_logo.png";
 import NavLink from "./navlink";
+import hamburger from "@/public/hamburger.svg";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [expanded, setExpanded] = useState(true);
+  
+
   const paths = [
     { text: "TEAM", path: "/team" },
     { text: "MENU", path: "/menu" },
@@ -19,7 +24,26 @@ export default function Navbar() {
             <Image src={logo} alt="Sandbox Studios Logo" height={50} />
           </Link>
           <div className="flex-pad full-width" />
-          {paths.map(NavLink)}
+          <div className="vflex">
+            <div className="padder" />
+            <Image
+              src={hamburger}
+              className={`${styles.burger} hoverable`}
+              alt="Hamburger icon"
+              onClick={() => setExpanded(!expanded)}
+            />
+            <div className="padder" />
+          </div>
+          <div
+            className={styles.navlinkcontainer}
+            style={{
+              // backgroundColor: window.matchMedia("(max-width: 480px)").matches
+              //   ? "red"
+              //   : "blue",
+            }}
+          >
+            {paths.map(NavLink)}
+          </div>
         </div>
       </div>
       <div className="padder" />

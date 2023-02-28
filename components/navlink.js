@@ -7,7 +7,7 @@ export default function NavLink({ text, path }) {
       <div className={styles.navLink}>
         <div className={styles.padder} />
         <Link href={path}>
-          <div className={styles.button}>{text}</div>
+          <div className={` ${styles.button} hoverable`}>{text}</div>
         </Link>
         <div className={styles.padder} />
       </div>
