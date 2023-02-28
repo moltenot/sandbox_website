@@ -4,11 +4,20 @@ import Link from "next/link";
 import logo from "../public/black_logo.png";
 import NavLink from "./navlink";
 import hamburger from "@/public/hamburger.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [expanded, setExpanded] = useState(true);
-  
+  const [expanded, setExpanded] = useState(false);
+
+  const [isDesktop, setMatches] = useState(
+    window.matchMedia("(min-width: 480px)").matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia("(min-width: 480px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
 
   const paths = [
     { text: "TEAM", path: "/team" },
@@ -37,9 +46,7 @@ export default function Navbar() {
           <div
             className={styles.navlinkcontainer}
             style={{
-              // backgroundColor: window.matchMedia("(max-width: 480px)").matches
-              //   ? "red"
-              //   : "blue",
+              display: expanded || isDesktop ? "block" : "none",
             }}
           >
             {paths.map(NavLink)}
