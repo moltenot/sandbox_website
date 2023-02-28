@@ -15,7 +15,16 @@
   background-color: antiquewhite;
 }
 
-.horizontal-flex {
+.padder {
+  flex:auto;
+}
+
+.vflex {
+  display: flex;
+  flex-direction: column;
+}
+
+.hflex {
   display: flex;
   flex-direction: row;
 }

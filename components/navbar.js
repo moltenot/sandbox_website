@@ -10,12 +10,16 @@ export default function Navbar() {
     { text: "GEAR", path: "/gear" },
   ];
   return (
-    <div className={`${styles.navbar} full-width`}>
-      <div className="max-width-large horizontal-flex">
-        <Image src={logo} alt="Sandbox Studios Logo" height={50} />
-        <div className="flex-pad full-width"/>
-        {paths.map(NavLink)}
+    <div className={`${styles.navbar} full-width vflex`}>
+      <div className="padder" />
+      <div>
+        <div className="max-width-large hflex">
+          <Image src={logo} alt="Sandbox Studios Logo" height={50} />
+          <div className="flex-pad full-width" />
+          {paths.map(NavLink)}
+        </div>
       </div>
+      <div className="padder" />
     </div>
   );
 }
