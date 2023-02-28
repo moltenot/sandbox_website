@@ -18,25 +18,32 @@ export default function Footer() {
               Floor 9, 104 The Terrace <br /> Wellington, 6011 <br /> New
               Zealand
             </li>
-            <li> <Link href={"tel:0800 788346"}>0800 STUDIO</Link>
-              <br /> <Link href={"tel:0800 788346"}>0800 788346</Link>
+          </ul>
+        </FooterList>
+        <FooterList headerText={"Contact"}>
+          <ul>
+            <li>
+              <Link href={"tel:0800 788346"}>0800 STUDIO</Link>
             </li>
             <li>
-              <Link href={" https://sandboxstudio.co.nz/"}>
-                https://sandboxstudio.co.nz/
+              <Link href={"mailto:sandboxstudionz@gmail.com"}>
+                sandboxstudionz@gmail.com
               </Link>
             </li>
-            <li>
-                <Link href={"mailto:sandboxstudionz@gmail.com"}>sandboxstudionz@gmail.com</Link>
-                </li>
           </ul>
         </FooterList>
         <FooterList headerText={"Social"}>
           <ul>
             <li>
-                <Link href={"https://www.facebook.com/SandboxStudioNZ/"}>Facebook</Link>
-                </li>
-            <li><Link href={"https://www.instagram.com/sandboxstudionz/"}>Instagram</Link></li>
+              <Link href={"https://www.facebook.com/SandboxStudioNZ/"}>
+                Facebook
+              </Link>
+            </li>
+            <li>
+              <Link href={"https://www.instagram.com/sandboxstudionz/"}>
+                Instagram
+              </Link>
+            </li>
           </ul>
         </FooterList>
       </div>

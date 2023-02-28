@@ -11,13 +11,15 @@
 
 .container ul {
   list-style-position: outside;
-  list-style-type: square;
-  padding-left: 10px;
+  list-style-type: none;
+  /* padding-left: 10px; */
+  padding-left: 0;
 }
 
 .container li {
-  padding-top: 3px;
-  padding-bottom: 3px;
+  --padding-top-bot: 8px;
+  padding-top: var(--padding-top-bot);
+  padding-bottom: var(--padding-top-bot);
 }
 
 .container h4 {
