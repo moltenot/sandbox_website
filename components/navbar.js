@@ -8,22 +8,23 @@ import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [expanded, setExpanded] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(true);
 
-  const [isDesktop, setMatches] = useState(
-    window.matchMedia("(min-width: 480px)").matches
-  );
-
+  // AYAYAYAYAI thiss is not the goods
   useEffect(() => {
     window
       .matchMedia("(min-width: 480px)")
-      .addEventListener("change", (e) => setMatches(e.matches));
-  }, []);
+      .addEventListener("change", (e) => {
+        console.log("fuck yeah");
+        setIsDesktop(e.matches);
+  })}, []);
 
   const paths = [
     { text: "TEAM", path: "/team" },
     { text: "MENU", path: "/menu" },
     { text: "GEAR", path: "/gear" },
   ];
+
   return (
     <div className={`${styles.navbar} full-width vflex`}>
       <div className="padder" />
@@ -34,7 +35,7 @@ export default function Navbar() {
           </Link>
           <div className="flex-pad full-width" />
           <div className="vflex">
-            <div className="padder" />
+            <div className="padder" >{JSON.stringify(isDesktop)} {JSON.stringify(expanded)}</div>
             <Image
               src={hamburger}
               className={`${styles.burger} hoverable`}
@@ -46,7 +47,7 @@ export default function Navbar() {
           <div
             className={styles.navlinkcontainer}
             style={{
-              display: expanded || isDesktop ? "block" : "none",
+              display: isDesktop || expanded  ? "block" : "none",
             }}
           >
             {paths.map(NavLink)}
