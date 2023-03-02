@@ -5,6 +5,7 @@ import logo from "../public/black_logo.png";
 import NavLink from "./navlink";
 import hamburger from "@/public/hamburger.svg";
 import { useState } from "react";
+import useWindowDimensions from "@/hooks/windowDimensions";
 
 export default function Navbar() {
   const [expanded, setExpanded] = useState(false);
@@ -13,6 +14,8 @@ export default function Navbar() {
     { text: "MENU", path: "/menu" },
     { text: "GEAR", path: "/gear" },
   ];
+
+  const {height, width} = useWindowDimensions()
 
   return (
     <div>
@@ -43,7 +46,7 @@ export default function Navbar() {
         <div
           className={styles.navlinkoverflow}
           style={{
-            display: expanded ? "block" : "none",
+            display: expanded && width < 480 ? "block" : "none",
           }}
         >
           {paths.map(NavLink)}

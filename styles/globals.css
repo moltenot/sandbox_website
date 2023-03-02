@@ -12,7 +12,7 @@ body {
 }
 
 .hoverable:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .hoverable {
