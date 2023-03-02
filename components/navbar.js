@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className={`${styles.navbar} full-width vflex`}>
         <div className="padder" />
         <div>
-          <div className="max-width-large hflex">
+          <div className="cont-lg hflex">
             <Link href={"/"}>
               <Image src={logo} alt="Sandbox Studios Logo" height={50} />
             </Link>
