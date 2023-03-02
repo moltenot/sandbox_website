@@ -1,7 +1,29 @@
 .container {
-    background-color: aliceblue;
+  --padding: 2rem;
+  background-color: aliceblue;
+  display: flex;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  min-height: 50vh;
+  position: relative;
 }
 
-.container image {
-    width: 30vw;
+.textcontainer {
+  width: 50%;
+  text-align: right;
+  margin-left: var(--padding);
+  padding-top: var(--padding);
+}
+
+.imgcontainer {
+  position: relative;
+  flex: auto;
+  width: 50%;
+  height: 50vh;
+  background-color: burlywood;
+  margin: var(--padding);
+}
+
+.image {
+  object-fit: cover;
 }
