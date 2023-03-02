@@ -1,6 +1,5 @@
 .container {
   --padding: 2rem;
-  background-color: aliceblue;
   display: flex;
   padding-top: var(--padding);
   padding-bottom: var(--padding);
@@ -20,10 +19,29 @@
   flex: auto;
   width: 50%;
   height: 50vh;
-  background-color: burlywood;
   margin: var(--padding);
 }
 
 .image {
   object-fit: cover;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .textcontainer {
+    text-align: center;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+  }
+
+  .imgcontainer {
+    width: calc(100vw - 2 * var(--padding));
+    height: 30vh;
+    margin-bottom: calc(var(--padding)/2);
+  }
 }
