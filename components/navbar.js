@@ -8,14 +8,13 @@ import { useState } from "react";
 import useWindowDimensions from "@/hooks/windowDimensions";
 
 export default function Navbar() {
-  const {height, width} =useWindowDimensions();
+  const { height, width } = useWindowDimensions();
   const [expanded, setExpanded] = useState(false);
   const paths = [
     { text: "TEAM", path: "/team" },
     { text: "MENU", path: "/menu" },
     { text: "GEAR", path: "/gear" },
   ];
-
 
   return (
     <div>
@@ -37,7 +36,11 @@ export default function Navbar() {
               />
               <div className="padder" />
             </div>
-            <div className={styles.navlinkcontainer}>{paths.map(NavLink)}</div>
+            <div className={styles.navlinkcontainer}>
+              {paths.map(({ path, text }) => (
+                <NavLink path={path} text={text} key={text} />
+              ))}
+            </div>
           </div>
         </div>
         <div className="padder" />
@@ -49,7 +52,9 @@ export default function Navbar() {
             display: expanded && width < 480 ? "block" : "none",
           }}
         >
-          {paths.map(NavLink)}
+          {paths.map(({ path, text }) => (
+            <NavLink path={path} text={text} key={text} />
+          ))}
         </div>
       </div>
     </div>
