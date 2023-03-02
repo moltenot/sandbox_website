@@ -8,6 +8,7 @@ import { useState } from "react";
 import useWindowDimensions from "@/hooks/windowDimensions";
 
 export default function Navbar() {
+  const {height, width} =useWindowDimensions();
   const [expanded, setExpanded] = useState(false);
   const paths = [
     { text: "TEAM", path: "/team" },
@@ -15,7 +16,6 @@ export default function Navbar() {
     { text: "GEAR", path: "/gear" },
   ];
 
-  const {height, width} = useWindowDimensions()
 
   return (
     <div>
