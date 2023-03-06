@@ -18,7 +18,7 @@
   position: relative;
   flex: auto;
   width: 50%;
-  height: 50vh;
+  height: 25rem;
   margin: var(--padding);
 }
 
@@ -42,6 +42,6 @@
   .imgcontainer {
     width: calc(100vw - 2 * var(--padding));
     height: 30vh;
-    margin-bottom: calc(var(--padding)/2);
+    margin-bottom: calc(var(--padding) / 2);
   }
 }

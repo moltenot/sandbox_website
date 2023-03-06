@@ -27,7 +27,6 @@ export default function Home() {
             supportive people who work fast, reliable and know every inch of
             their craft, then Sandbox Studio is your ticket to success.
           </p>
-          <p>a bit more space to add stuff here</p>
         </TextColumnImageColumn>
       </Navigation>
     </>
