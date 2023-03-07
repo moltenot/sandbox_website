@@ -23,7 +23,7 @@ export default function Navbar() {
         <div>
           <div className="cont-lg hflex">
             <Link href={"/"}>
-              <Image src={logo} alt="Sandbox Studios Logo" height={50} />
+              <Image src={logo} alt="Sandbox Studios Logo" height={40} />
             </Link>
             <div className="flex-pad full-width" />
             <div className="vflex">

@@ -5,14 +5,9 @@
   text-align: center;
 }
 
-.padder {
-    flex: auto;
-}
-
 .button {
   color: black;
   font-weight: bold;
-  text-decoration: none;
 }
 
 @media only screen and (max-width: 480px) {

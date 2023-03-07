@@ -5,11 +5,11 @@ export default function NavLink({ text, path }) {
   return (
     <>
       <div className={styles.navLink}>
-        <div className={styles.padder} />
+        <div className="flex-pad" />
         <Link href={path}>
           <div className={` ${styles.button} hoverable`}>{text}</div>
         </Link>
-        <div className={styles.padder} />
+        <div className="flex-pad" />
       </div>
     </>
   );
