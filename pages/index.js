@@ -12,6 +12,7 @@ import pre_production from "@/public/journey/pre_production.jpg";
 import production from "@/public/journey/production.jpg";
 import post_production from "@/public/journey/post_production.jpg";
 import mastering from "@/public/journey/mastering.jpg";
+import AlbumShowcase from "@/components/sections/albumShowcase";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -94,6 +95,7 @@ export default function Home() {
             tailored approach.
           </p>
         </HorizontalCards>
+        <AlbumShowcase />
       </Navigation>
     </>
   );
