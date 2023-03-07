@@ -10,6 +10,8 @@ import TallCard from "@/components/tallCard";
 
 import pre_production from "@/public/journey/pre_production.jpg";
 import production from "@/public/journey/production.jpg";
+import post_production from "@/public/journey/post_production.jpg";
+import mastering from "@/public/journey/mastering.jpg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,18 +43,56 @@ export default function Home() {
               alt={"a photo of a rack of pedals"}
               header={"Pre Production"}
               paragraph="we do preproduction"
-            >
-            </TallCard>,
+            ></TallCard>,
             <TallCard
-            key={"prod"}
-            imageSrc={production}
-            alt="photo of a computer screen running a DAW"
-            header={"Production"}
-            paragraph="we also produce"/>
+              key={"prod"}
+              imageSrc={production}
+              alt="photo of a computer screen running a DAW"
+              header={"Production"}
+              paragraph="we also produce, check out pete's produce for the details"
+            />,
+            <TallCard
+              key={"post"}
+              imageSrc={post_production}
+              alt="photo of an on air sign"
+              header="Post Production"
+              paragraph="we can do post production"
+            />,
+            <TallCard
+              key={"mastering"}
+              imageSrc={mastering}
+              alt="photo from behind a desk"
+              header={"Mastering"}
+              paragraph="we can master the hell out of your song, try us I dare you"
+            />,
+            <TallCard
+              key={"packaging"}
+              imageSrc={mastering}
+              alt="packaging and design image"
+              header={"Packaging & Design"}
+              paragraph="Packaging & Design"
+            />,
+            <TallCard
+              key={"release"}
+              imageSrc={mastering}
+              alt="release image"
+              header={"Release"}
+              paragraph="Release Plan
+            Streaming Platforms
+            Marketing & Promo"
+            />,
           ]}
         >
-          <h2>Your journey, from start to end</h2>
-          <p>We cover the complete cycle of audio production</p>
+          <h2>
+            <span class="italics">Your</span> journey, from start to end
+          </h2>
+          <p>
+            Discover a seamless journey from pre-production to release with our
+            music studio. Our team of experts will help you refine your sound in
+            the pre-production stage and assist you in delivering a polished
+            final product. Let us elevate your music to the next level with our
+            tailored approach.
+          </p>
         </HorizontalCards>
       </Navigation>
     </>

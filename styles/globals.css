@@ -1,7 +1,6 @@
 :root {
   --navbar-height: 64px;
   --container-padding: 0.5rem;
-  background-color: rgb(236, 236, 236);
 }
 
 h1,
@@ -77,4 +76,8 @@ body {
 
 a {
   text-decoration-line: none;
+}
+
+span.italics {
+  font-style: italic;
 }

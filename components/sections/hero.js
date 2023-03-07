@@ -24,6 +24,7 @@ export default function Hero() {
         src={heroImage}
         className={styles.image}
         priority
+        blurDataURL
         fill
         alt="a panorama of the Sandbox Studios"
       />

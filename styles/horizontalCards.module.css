@@ -1,0 +1,14 @@
+.scrollcontainer {
+  display: flex;
+  overflow-x: scroll;
+  flex-direction: row;
+  scrollbar-width: none;
+}
+
+.scrollcontainer::-webkit-scrollbar {
+  display: none;
+}
+
+.textcontainer {
+  text-align: center;
+}
