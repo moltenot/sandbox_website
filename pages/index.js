@@ -5,6 +5,11 @@ import Navigation from "@/components/navigation";
 import Hero from "@/components/sections/hero";
 import guitars from "@/public/guitars.jpg";
 import TextColumnImageColumn from "@/components/sections/textcolumnimagecolumn";
+import HorizontalCards from "@/components/sections/horizontalCards";
+import TallCard from "@/components/tallCard";
+
+import pre_production from "@/public/journey/pre_production.jpg";
+import production from "@/public/journey/production.jpg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +33,27 @@ export default function Home() {
             their craft, then Sandbox Studio is your ticket to success.
           </p>
         </TextColumnImageColumn>
+        <HorizontalCards
+          cards={[
+            <TallCard
+              key={"pre"}
+              imageSrc={pre_production}
+              alt={"a photo of a rack of pedals"}
+              header={"Pre Production"}
+              paragraph="we do preproduction"
+            >
+            </TallCard>,
+            <TallCard
+            key={"prod"}
+            imageSrc={production}
+            alt="photo of a computer screen running a DAW"
+            header={"Production"}
+            paragraph="we also produce"/>
+          ]}
+        >
+          <h2>Your journey, from start to end</h2>
+          <p>We cover the complete cycle of audio production</p>
+        </HorizontalCards>
       </Navigation>
     </>
   );
