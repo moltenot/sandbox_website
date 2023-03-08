@@ -11,8 +11,8 @@ export default function Navbar() {
   const { height, width } = useWindowDimensions();
   const [expanded, setExpanded] = useState(false);
   const paths = [
-    { text: "TEAM", path: "/team" },
-    { text: "MENU", path: "/menu" },
+    { text: "THE MENU", path: "/menu" },
+    { text: "FRONT OF HOUSE", path: "/team" },
     { text: "GEAR", path: "/gear" },
   ];
 
