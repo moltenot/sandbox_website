@@ -157,7 +157,6 @@ export default function AlbumShowcase() {
           maxHeight: expanded ? "none" : maxHeight,
           overflowY: expanded ? "visible" : "hidden",
           position: "relative",
-          overflowX: "hidden",
           marginLeft: "auto",
           marginRight: "auto",
         }}

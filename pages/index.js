@@ -84,9 +84,9 @@ export default function Home() {
             />,
           ]}
         >
-          <h2>
+          <h1>
             <span class="italics">Your</span> journey, from start to end
-          </h2>
+          </h1>
           <p>
             Discover a seamless journey from pre-production to release with our
             music studio. Our team of experts will help you refine your sound in
