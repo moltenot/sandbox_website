@@ -1,0 +1,23 @@
+.menuitem {
+  background-color: whitesmoke;
+  width: fit-content;
+  display: flex;
+  padding: 1rem;
+}
+.menuitemleft {
+  width: 20rem;
+}
+
+.menuitemright {
+  width: fit-content;
+  margin-left: 1rem;
+}
+
+.tooltip {
+  display: none;
+}
+
+.price {
+    
+font-size: 1.4rem;
+}
