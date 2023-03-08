@@ -3,6 +3,7 @@ import mastering from "@/public/journey/mastering.jpg";
 import styles from "@/styles/albumShowcase.module.css";
 import SubtleButton from "../subtleButton";
 import { useState } from "react";
+import useWindowDimensions from "@/hooks/windowDimensions";
 
 const ALBUMS = [
   {
@@ -139,6 +140,15 @@ const SIZE = 150;
 
 export default function AlbumShowcase() {
   const [expanded, setExpanded] = useState(false);
+  const { height, width } = useWindowDimensions();
+
+  let columns;
+  if (width === 0) {
+    columns = 10;
+  } else {
+    columns = Math.floor(width / SIZE);
+  }
+  console.log({ columns });
   const maxHeight = "80vh";
   return (
     <>
@@ -147,6 +157,9 @@ export default function AlbumShowcase() {
           maxHeight: expanded ? "none" : maxHeight,
           overflowY: expanded ? "visible" : "hidden",
           position: "relative",
+          overflowX: "hidden",
+          marginLeft: "auto",
+          marginRight: "auto",
         }}
       >
         <div className={styles.layer2}>
@@ -158,11 +171,16 @@ export default function AlbumShowcase() {
           </div>
         </div>
 
-        <h1 className="centred">SHOWCASE</h1>
+        <h1 className="centred">Showcase</h1>
 
         <div className="hflex">
-          <div className="flex-pad" />
-          <div className={styles.container}>
+          <div className="flex-pad"/>
+          <div
+            className={styles.container}
+            style={{
+              width: width === 0 ? "auto" : `${columns * SIZE}px`,
+            }}
+          >
             {ALBUMS.map((album) => (
               <div key={album.name} className={styles.albumcontainer}>
                 <Image
