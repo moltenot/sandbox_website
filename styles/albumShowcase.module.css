@@ -1,0 +1,24 @@
+.albumcontainer {
+  flex: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.layer2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.buttoncontainer {
+  position: absolute;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  translate: 50vw;
+}

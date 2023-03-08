@@ -81,3 +81,7 @@ a {
 span.italics {
   font-style: italic;
 }
+
+.centred {
+  text-align: center;
+}
