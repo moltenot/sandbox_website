@@ -4,6 +4,7 @@ import styles from "@/styles/albumShowcase.module.css";
 import SubtleButton from "../subtleButton";
 import { useEffect, useState } from "react";
 import useWindowDimensions from "@/hooks/windowDimensions";
+import Album from "../album";
 
 const ALBUMS = [
   {
@@ -192,16 +193,14 @@ export default function AlbumShowcase() {
             }}
           >
             {ALBUMS.map((album) => (
-              <div key={album.name} className={styles.albumcontainer}>
-                <Image
-                  src={mastering}
-                  alt={album.name}
-                  height={SIZE}
-                  width={SIZE}
-                  style={{ objectFit: "cover" }}
-                />
-                <div className="flex-pad" />
-              </div>
+              <Album
+                key={album.name}
+                size={SIZE}
+                name={album.name}
+                imageSrc={mastering}
+                artist={album.artist}
+                href={null}
+              />
             ))}
           </div>
           <div className="flex-pad" />
