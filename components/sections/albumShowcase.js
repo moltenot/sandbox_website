@@ -2,7 +2,7 @@ import Image from "next/image";
 import mastering from "@/public/journey/mastering.jpg";
 import styles from "@/styles/albumShowcase.module.css";
 import SubtleButton from "../subtleButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useWindowDimensions from "@/hooks/windowDimensions";
 
 const ALBUMS = [
@@ -139,8 +139,13 @@ const ALBUMS = [
 const SIZE = 150;
 
 export default function AlbumShowcase() {
+  const [mounted, setMounted] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const { height, width } = useWindowDimensions();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   let columns;
   if (width === 0) {
@@ -149,7 +154,12 @@ export default function AlbumShowcase() {
     columns = Math.floor(width / SIZE);
   }
   console.log({ columns });
-  const maxHeight = "80vh";
+  const maxHeight = "60vh";
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <>
       <div
@@ -173,10 +183,11 @@ export default function AlbumShowcase() {
         <h1 className="centred">Showcase</h1>
 
         <div className="hflex">
-          <div className="flex-pad"/>
+          <div className="flex-pad" />
           <div
             className={styles.container}
             style={{
+              display: mounted ? "flex" : "none",
               width: width === 0 ? "auto" : `${columns * SIZE}px`,
             }}
           >
