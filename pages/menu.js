@@ -40,11 +40,10 @@ export default function Menu() {
     <>
       <Navigation>
         <div className="cont-lg">
-          <h1 className="centred">Menu</h1>
           <div className={`${styles.container}`} >
             <div className="flex-pad"/>
             <div id="food">
-              <h2 className="centred">FOOD</h2>
+              <h1 className="centred">FOOD</h1>
               <ol>
                 <li>
                   <MenuItem
@@ -104,7 +103,7 @@ CD, or Vinyl."
             <div className="flex-pad" style={{maxWidth: "25px"}}/>
 
             <div id="drinks">
-              <h2 className="centred">DRINKS</h2>
+              <h1 className="centred">DRINKS</h1>
               <ol>
                 <li>
                   <MenuItem
