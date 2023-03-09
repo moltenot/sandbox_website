@@ -1,11 +1,10 @@
 .menuitem {
   background-color: whitesmoke;
-  width: fit-content;
   display: flex;
   padding: 1rem;
 }
 .menuitemleft {
-  width: 20rem;
+  width: 18rem;
 }
 
 .menuitemright {
@@ -18,6 +17,25 @@
 }
 
 .price {
-    
-font-size: 1.4rem;
+  font-size: 1.4rem;
+}
+
+.container {
+  display: flex;
+}
+
+.container ol {
+  list-style-type: none;
+  flex-direction: row;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media screen {
 }

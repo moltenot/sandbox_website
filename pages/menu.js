@@ -1,5 +1,7 @@
 import Navigation from "@/components/navigation";
+import useWindowDimensions from "@/hooks/windowDimensions";
 import styles from "@/styles/menu.module.css";
+import { useEffect, useState } from "react";
 
 function MenuItem({ name, description, price, tooltip }) {
   return (
@@ -22,12 +24,25 @@ const foodToolTip =
   "*Prices include up to 3 revisions. Additional revisions $95.";
 
 export default function Menu() {
+
+  const [mounted, setMounted] = useState(false)
+  const {width, height} = useWindowDimensions()
+
+  useEffect(() => setMounted(true), [])
+
+  const breakpoint = 480
+  const singleColumn = width < breakpoint
+
+
+  if (!mounted) return <div/>
+
   return (
     <>
       <Navigation>
         <div className="cont-lg">
           <h1 className="centred">Menu</h1>
-          <div className="hflex" style={{flexWrap: "wrap", marginLeft:"auto", marginRight:"auto"}}>
+          <div className={`${styles.container}`} >
+            <div className="flex-pad"/>
             <div id="food">
               <h2 className="centred">FOOD</h2>
               <ol>
@@ -86,6 +101,7 @@ CD, or Vinyl."
               </ol>
             </div>
 
+            <div className="flex-pad" style={{maxWidth: "25px"}}/>
 
             <div id="drinks">
               <h2 className="centred">DRINKS</h2>
@@ -146,6 +162,7 @@ CD, or Vinyl."
                 </li>
               </ol>
             </div>
+            <div className="flex-pad"/>
           </div>
         </div>
       </Navigation>
