@@ -1,19 +1,26 @@
 .container {
-    position: relative;
+  position: relative;
+}
+
+.textcontainer {
+  position: absolute;
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  font-size: 0.8rem;
 }
 
 .text {
-    position: absolute;
-    color: rgba(0,0,0,0);
-    background-color: rgba(0,0,0,0);
-    font-weight: bold;
-    padding: 10px;
-    height: 100%;
-    width: 100%;
-    font-size: 0.8rem;
+  padding: 0.5rem;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
-.text:hover {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.404);
+.textcontainer:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.404);
 }
