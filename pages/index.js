@@ -15,6 +15,7 @@ import mastering from "@/public/journey/mastering.jpg";
 import AlbumShowcase from "@/components/sections/albumShowcase";
 import Placeholder from "@/components/sections/placeholder";
 import Logos from "@/components/sections/logos";
+import ContactUs from "@/components/sections/contactUs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -98,8 +99,8 @@ export default function Home() {
           </p>
         </HorizontalCards>
         <AlbumShowcase />
-        <Logos/>
-        <Placeholder name="CONTACT FORM"/>
+        <Logos />
+        <ContactUs />
       </Navigation>
     </>
   );

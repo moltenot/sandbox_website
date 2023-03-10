@@ -17,7 +17,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div>
+    <div className={styles.navroot}>
       <div className={`${styles.navbar} full-width vflex`}>
         <div className="padder" />
         <div>

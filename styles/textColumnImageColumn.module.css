@@ -9,7 +9,7 @@
 
 .textcontainer {
   width: 50%;
-  text-align: right;
+  text-align: justify;
   margin-left: var(--padding);
   padding-top: var(--padding);
 }
