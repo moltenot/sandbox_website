@@ -10,12 +10,14 @@
 .layer2 {
   position: absolute;
   width: 100%;
+  user-select: none;
   z-index: 1;
   height: 100%;
 }
 
 .buttoncontainer {
   position: absolute;
+  z-index: 1;
   bottom: 1rem;
   transform: translateX(-50%);
   translate: 50vw;

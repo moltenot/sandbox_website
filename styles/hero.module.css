@@ -12,6 +12,10 @@
   translate: 0 calc(var(--navbar-height) * -1);
 }
 
+.textcontainer h1 {
+  font-weight: 700;
+}
+
 .callme {
   color: white;
   width: fit-content;

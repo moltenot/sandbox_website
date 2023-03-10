@@ -1,15 +1,20 @@
 import Image from "next/image";
+import styles from '@/styles/album.module.css'
+
 
 export default function Album({ name, imageSrc, artist, href, size }) {
   return (
-    <div style={{position: "relative"}}>
-      <div style={{position: "absolute", color: "white", fontWeight: "bold", backgroundColor: "black"}}>{name}<br/> {artist}</div>
+    <div className={styles.container}>
+      <div className={styles.text} >
+        {name}
+        <br /> {artist}
+      </div>
       <Image
         src={imageSrc}
         width={size}
         height={size}
         alt={`Album art for ${name}`}
-        style={{objectFit: "cover"}}
+        style={{ objectFit: "cover" }}
       />
     </div>
   );

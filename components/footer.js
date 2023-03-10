@@ -15,8 +15,10 @@ export default function Footer() {
         <FooterList headerText={"Address"}>
           <ul>
             <li>
-              Floor 9, 104 The Terrace <br /> Wellington, 6011 <br /> New
-              Zealand
+              <Link href={"https://goo.gl/maps/N9ZaakdjiycQz8VM6"}>
+                Floor 9, 104 The Terrace <br /> Wellington, 6011 <br /> New
+                Zealand
+              </Link>
             </li>
           </ul>
         </FooterList>

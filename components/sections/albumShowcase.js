@@ -172,16 +172,14 @@ export default function AlbumShowcase() {
           marginRight: "auto",
         }}
       >
-        <div className={styles.layer2}>
-          <div className={`${styles.buttoncontainer}`}>
-            <SubtleButton
-              text={expanded ? "see less" : "see more"}
-              clickHandler={() => setExpanded(!expanded)}
-            />
-          </div>
+        <div className={`${styles.buttoncontainer}`}>
+          <SubtleButton
+            text={expanded ? "see less" : "see more"}
+            clickHandler={() => setExpanded(!expanded)}
+          />
         </div>
 
-        <h1 className="centred">Showcase</h1>
+        <h1 className="centred">SHOWCASE</h1>
 
         <div className="hflex">
           <div className="flex-pad" />
