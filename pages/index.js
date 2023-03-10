@@ -14,6 +14,7 @@ import post_production from "@/public/journey/post_production.jpg";
 import mastering from "@/public/journey/mastering.jpg";
 import AlbumShowcase from "@/components/sections/albumShowcase";
 import Placeholder from "@/components/sections/placeholder";
+import Logos from "@/components/sections/logos";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -86,7 +87,7 @@ export default function Home() {
           ]}
         >
           <h1>
-            <span class="italics">Your</span> journey, from start to end
+            <span className="italics">Your</span> journey, from start to end
           </h1>
           <p>
             Discover a seamless journey from pre-production to release with our
@@ -97,7 +98,7 @@ export default function Home() {
           </p>
         </HorizontalCards>
         <AlbumShowcase />
-        <Placeholder name={"LOGOS"}/>
+        <Logos/>
         <Placeholder name="CONTACT FORM"/>
       </Navigation>
     </>
