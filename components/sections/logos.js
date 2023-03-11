@@ -61,7 +61,7 @@ export default function Logos() {
   }
   return (
     <>
-      <div className="">
+      <div style={{overflowX: "hidden"}}>
         <h1 className="centred">CLIENTS</h1>
         {logoLists}
       </div>
