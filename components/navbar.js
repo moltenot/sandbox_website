@@ -7,14 +7,15 @@ import hamburger from "@/public/hamburger.svg";
 import { useState } from "react";
 import useWindowDimensions from "@/hooks/windowDimensions";
 
+export const PATHS = [
+  { text: "THE MENU", path: "/menu" },
+  { text: "FRONT OF HOUSE", path: "/team" },
+  { text: "GEAR", path: "/gear" },
+];
 export default function Navbar() {
   const { height, width } = useWindowDimensions();
   const [expanded, setExpanded] = useState(false);
-  const paths = [
-    { text: "THE MENU", path: "/menu" },
-    { text: "FRONT OF HOUSE", path: "/team" },
-    { text: "GEAR", path: "/gear" },
-  ];
+
 
   return (
     <div className={styles.navroot}>
@@ -37,7 +38,7 @@ export default function Navbar() {
               <div className="padder" />
             </div>
             <div className={styles.navlinkcontainer}>
-              {paths.map(({ path, text }) => (
+              {PATHS.map(({ path, text }) => (
                 <NavLink path={path} text={text} key={text} />
               ))}
             </div>
@@ -52,7 +53,7 @@ export default function Navbar() {
             display: expanded && width < 480 ? "block" : "none",
           }}
         >
-          {paths.map(({ path, text }) => (
+          {PATHS.map(({ path, text }) => (
             <NavLink path={path} text={text} key={text} />
           ))}
         </div>
