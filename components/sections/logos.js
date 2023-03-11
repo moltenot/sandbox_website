@@ -37,20 +37,17 @@ function LogoRow({ logoList }) {
     <div className="hflex" style={{ marginLeft: "50vw", translate: "-50%" ,
     width:"fit-content"}}>
       <div className="flex-pad" />
-      {logoList.map((l) => {
-        console.log(l);
-        console.log(PREFIX + l);
-        return (
-          <div key={l}>
-            <Image
-              src={PREFIX + l}
-              alt={`logo for ${l}`}
-              width={SIZE}
-              height={SIZE}
-            />
-          </div>
-        );
-      })}
+      {logoList.map((l) =>
+          (
+              <div key={l}>
+                <Image
+                    src={PREFIX + l}
+                    alt={`logo for ${l}`}
+                    width={SIZE}
+                    height={SIZE}
+                />
+              </div>
+          ))}
       <div className="flex-pad" />
     </div>
   );
