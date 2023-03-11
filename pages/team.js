@@ -4,12 +4,19 @@ import Facebook from "@/components/sociallinks/facebook";
 import Website from "@/components/sociallinks/website";
 import TeamMember from "@/components/teamMember";
 import benni from "@/public/people/benni.jpg"
+import peter from "@/public/people/peter.jpg"
 
 const FOH = [
     {
+        imageSrc: peter,
         name: "Peter Molteno",
         role: "Engineer | COO | Co-founder",
-        links: [<Insta key={"ig"} link={'https://www.instagram.com/__petes_produce_/'}/>]
+        links: [<Insta key={"ig"} link={'https://www.instagram.com/__petes_produce_/'}/>],
+        bio: <div>
+            <p>Peter is an audio engineer and co-founder of Sandbox Studio. His expertise in analogue audio processing has helped the studio develop a signature warm and rich sound, setting it apart from other recording facilities.
+            </p>
+        </div>
+
     },
     {
         imageSrc: benni,
@@ -47,8 +54,9 @@ export default function Team() {
         <>
             <Navigation>
                 <h1>FRONT OF HOUSE</h1>
-                <TeamMember imageSrc={imageSrc} name={name} role={role} links={links} bio={bio}/>
+                {FOH.map(person => <TeamMember key={person.name} {...person} /> )}
                 <h1>COOKS</h1>
+                {COOKS.map(person => <TeamMember key={person.name} {...person} /> )}
 
             </Navigation>
         </>
