@@ -7,7 +7,7 @@ export default function TeamMember({imageSrc, name, role, links, bio}) {
         <Image src={imageSrc} style={{objectFit: "cover"}} alt={`photo of ${name}`} width={imageDim} height={imageDim}/>
         <h2>{name}</h2>
         <p>{role}</p>
-        {links}
+        <div className={styles.sociallinks}>{links}</div>
         {bio}
     </div>
 }

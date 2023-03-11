@@ -1,7 +1,25 @@
 
 .root {
     margin: 2rem;
-    background-color: antiquewhite;
+    padding: 1rem;
     width: 300px;
     text-align: justify;
+    background-color: var(--light-gray);
+}
+
+.sociallinks {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.sociallinks > div {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+/*their name*/
+.root h2 {
+    font-weight: bold;
+
 }

@@ -1,5 +1,5 @@
 .menuitem {
-  background-color: whitesmoke;
+  background-color: var(--light-gray);
   display: flex;
   padding: 1rem;
 }

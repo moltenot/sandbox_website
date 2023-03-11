@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function SocialLink({link, imageSrc, alt}) {
-    const size = 30
+    const size = 20
     return <>
         <div>
             <Link href={link}>
