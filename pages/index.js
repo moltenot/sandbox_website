@@ -1,6 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import Navigation from "@/components/navigation";
 import Hero from "@/components/sections/hero";
 import guitars from "@/public/guitars.jpg";
@@ -13,11 +10,8 @@ import production from "@/public/journey/production.jpg";
 import post_production from "@/public/journey/post_production.jpg";
 import mastering from "@/public/journey/mastering.jpg";
 import AlbumShowcase from "@/components/sections/albumShowcase";
-import Placeholder from "@/components/sections/placeholder";
 import Logos from "@/components/sections/logos";
-import ContactUs from "@/components/sections/contactUs";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -100,7 +94,6 @@ export default function Home() {
         </HorizontalCards>
         <AlbumShowcase />
         <Logos />
-        <ContactUs />
       </Navigation>
     </>
   );

@@ -4,6 +4,7 @@ import FooterList from "./footerlist";
 export default function Footer() {
   return (
     <div className={styles.root}>
+      <hr/>
       <div className={`cont-md ${styles.container}`}>
         <FooterList headerText={"Legal"}>
           <ul>
@@ -48,6 +49,10 @@ export default function Footer() {
             </li>
           </ul>
         </FooterList>
+      </div>
+      <div className="centred smaller">
+        SANDBOX STUDIO LIMITED - COMPANY # 6516112 | NZBN 9429046425065 · ALL
+        RIGHTS RESERVED 2017 - 2099
       </div>
     </div>
   );
