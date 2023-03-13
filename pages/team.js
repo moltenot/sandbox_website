@@ -44,14 +44,12 @@ const FOH = [
     }
 ]
 
-const defaultBio = <p>Can put a bio here if they want</p>
 const COOKS = [
     {
         imageSrc: ateo,
         name: "Ateo Buhne",
         role: "Drummer",
         links: [<Insta key={"ig"} link={"https://www.instagram.com/ateo.music/"}/>],
-        bio: defaultBio
     },
     {
         imageSrc: daniela,
@@ -59,7 +57,6 @@ const COOKS = [
         role: "Pianist",
         links: [<Facebook link={"https://www.facebook.com/daniela.mogin"} key={"fb"}/>,
             <Insta link={"https://www.instagram.com/hey_dani_dani/"} key={"ig"}/>],
-        bio: defaultBio
     },
     {
         imageSrc: briar,
@@ -68,14 +65,12 @@ const COOKS = [
         links: [<Facebook key={"fb"} link={"https://www.facebook.com/briar.prastiti"}/>,
             <Insta key={"ig"} link={"https://www.instagram.com/hydrabitch/"}/>,
             <Website key={"web"} link={"https://www.briarprastiti.com/"}/>],
-        bio: defaultBio
     },
     {
         imageSrc: lorenzo,
         name: "Lorenzo Buhne",
         role: "Mix Engineer",
         links: [<Facebook key={"fb"} link={"https://www.facebook.com/lorenzo.buhne.5"}/>],
-        bio: defaultBio
     }
 ]
 
@@ -148,16 +143,14 @@ export default function Team() {
 
                 <TeamList teamList={FOH}>
                     <h1>FRONT OF HOUSE</h1>
-                    <p className="justified">The hospitality at Sandbox is unmatched, and our front of house staff have
-                        years of
-                        experience
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                    <p className="justified">You couldn't have a better crew to take care of you on your creative process, our front of house staff have years of experience
                         helping you make excellent tunes</p>
                 </TeamList>
 
                 <TeamList teamList={COOKS}>
-                    <h1>COOKS</h1>
-                    <p>To help you achieve your culinary goals we have a variety of chefs who are masters of their
-                        craft</p>
+                    <h1>BACK OF HOUSE</h1>
+                    <p>These fellas are where the rubber meets the road for the Sandbox Studio sound</p>
                 </TeamList>
 
             </Navigation>
