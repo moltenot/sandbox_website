@@ -27,7 +27,7 @@ export default function Navbar() {
             <Link href={"/"}>
               <Image src={logo} alt="Sandbox Studios Logo" height={40} />
             </Link>
-            <div className="flex-pad full-width" />
+            <div className="flex-pad" />
             <div className="vflex">
               <div className="padder" />
               <Image
