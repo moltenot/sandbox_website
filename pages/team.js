@@ -24,6 +24,7 @@ const FOH = [
             <Website link={"https://bennikrueger.com/"} key={"web"}/>],
         bio: <p>Benni Krueger is a co-founder of Sandbox Studio and an accomplished audio engineer with a passion for
             music. His technical expertise in audio production and dedication to excellence have helped establish
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             Sandbox Studio as a premier recording facility. Benni's contributions to the music community have been
             widely recognized, and he continues to inspire aspiring audio engineers and musicians with his talent and
             commitment. </p>
