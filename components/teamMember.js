@@ -1,10 +1,11 @@
 import Image from "next/image";
 import styles from "@/styles/teamMember.module.css"
 
+export const IMAGE_DIM = 300
+
 export default function TeamMember({imageSrc, name, role, links, bio}) {
-    const imageDim = 300
     return <div className={styles.root}>
-        <Image src={imageSrc} style={{objectFit: "cover"}} alt={`photo of ${name}`} width={imageDim} height={imageDim}/>
+        <Image src={imageSrc} style={{objectFit: "cover"}} alt={`photo of ${name}`} width={IMAGE_DIM} height={IMAGE_DIM}/>
         <h2>{name}</h2>
         <p>{role}</p>
         <div className={styles.sociallinks}>{links}</div>

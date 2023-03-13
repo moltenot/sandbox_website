@@ -3,11 +3,16 @@ import Insta from "@/components/sociallinks/insta";
 import Facebook from "@/components/sociallinks/facebook";
 import Website from "@/components/sociallinks/website";
 import TeamMember from "@/components/teamMember";
-import benni from "@/public/people/benni.jpg"
-import peter from "@/public/people/peter.jpg"
 import styles from "@/styles/team.module.css"
 import useWindowDimensions from "@/hooks/windowDimensions";
 import {useEffect, useState} from "react";
+
+import benni from "@/public/people/benni.jpg"
+import peter from "@/public/people/peter.jpg"
+import ateo from "@/public/people/ateo.jpg"
+import daniela from "@/public/people/daniela.jpg"
+import briar from "@/public/people/briar.jpg"
+import lorenzo from "@/public/people/lorenzo.jpg"
 
 const FOH = [
     {
@@ -40,15 +45,31 @@ const FOH = [
 
 const COOKS = [
     {
+        imageSrc: ateo,
         name: "Ateo Buhne",
         role: "Drummer",
         links: [<Insta key={"ig"} link={"https://www.instagram.com/ateo.music/"}/>]
     },
     {
+        imageSrc: daniela,
         name: "Daniela Mogin",
         role: "Pianist",
         links: [<Facebook link={"https://www.facebook.com/daniela.mogin"} key={"fb"}/>,
             <Insta link={"https://www.instagram.com/hey_dani_dani/"} key={"ig"}/>]
+    },
+    {
+        imageSrc: briar,
+        name: "Briar Prastiti",
+        role: "Vocal Coach",
+        links: [<Facebook key={"fb"} link={"https://www.facebook.com/briar.prastiti"}/>,
+            <Insta key={"ig"} link={"https://www.instagram.com/hydrabitch/"}/>,
+            <Website key={"web"} link={"https://www.briarprastiti.com/"}/>]
+    },
+    {
+        imageSrc: lorenzo,
+        name: "Lorenzo Buhne",
+        role: "Mix Engineer",
+        links: [<Facebook key={"fb"} link={"https://www.facebook.com/lorenzo.buhne.5"}/>]
     }
 ]
 
@@ -96,6 +117,7 @@ export default function Team() {
     return (
         <>
             <Navigation>
+
                 <TeamList teamList={FOH}>
                     <h1>FRONT OF HOUSE</h1>
                     <p className="justified">The hospitality at Sandbox is unmatched, and our front of house staff have
