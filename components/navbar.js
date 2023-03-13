@@ -1,4 +1,4 @@
-import styles from "@/styles/Navbar.module.css";
+import styles from "@/styles/navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/black_logo.png";
@@ -13,12 +13,13 @@ export const PATHS = [
   { text: "GEAR", path: "/gear" },
 ];
 export default function Navbar() {
-  const { height, width } = useWindowDimensions();
-  const [expanded, setExpanded] = useState(false);
+  const { width } = useWindowDimensions();
+  const [expanded, setExpanded] = useState(true);
 
 
   return (
     <div className={styles.navroot}>
+      <div className={`${styles.fixed} full-width`}>
       <div className={`${styles.navbar} full-width vflex`}>
         <div className="padder" />
         <div>
@@ -57,6 +58,7 @@ export default function Navbar() {
             <NavLink path={path} text={text} key={text} />
           ))}
         </div>
+      </div>
       </div>
     </div>
   );
