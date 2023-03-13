@@ -2,7 +2,7 @@ import Navigation from "@/components/navigation";
 import Insta from "@/components/sociallinks/insta";
 import Facebook from "@/components/sociallinks/facebook";
 import Website from "@/components/sociallinks/website";
-import TeamMember from "@/components/teamMember";
+import TeamMember, {IMAGE_DIM} from "@/components/teamMember";
 import styles from "@/styles/team.module.css"
 import useWindowDimensions from "@/hooks/windowDimensions";
 import {useEffect, useState} from "react";
@@ -74,30 +74,37 @@ const COOKS = [
 ]
 
 function TeamList({teamList, children}) {
+
+    const columnWidth = IMAGE_DIM + 30 // roughly the width of a team member in pixels, maybe a bit more
+
     const {width} = useWindowDimensions()
     const [mounted, setMounted] = useState(false)
     useEffect(() => setMounted(true), [])
 
     if (!mounted) return null;
 
-    const mobile = width < 768
+    const numberOfColumns = Math.floor(width / columnWidth)
 
-    let teamListRender;
-    if (teamList.length === 0) return null;
-    if (mobile) {
-        teamListRender = teamList.map(person => {
-            return <div key={person.name} className={"hflex"}>
+    const numberOfRows = Math.ceil(teamList.length / numberOfColumns)
+    if (numberOfRows === 0) return null;
+
+    let rows = [];
+
+    for (let i = 0; i < numberOfRows; i++) {
+
+        let curRow = [];
+        for (let j = 0; j < numberOfColumns; j++) {
+            const index = i * numberOfColumns + j;
+            if (index >= teamList.length) continue;
+            curRow.push(<TeamMember key={i + numberOfColumns * j} {...teamList[i * numberOfColumns + j]}/>)
+        }
+        rows.push(
+            <div className={`${styles.teamlistdesktop} hflex`} key={i} >
                 <div className={"flex-pad"}/>
-                <TeamMember {...person} />
+                {curRow}
                 <div className={"flex-pad"}/>
             </div>
-        })
-    } else {
-        teamListRender = <div className={`hflex ${styles.teamlistdesktop}`}>
-            <div className={"flex-pad"}/>
-            {teamList.map(person => <  TeamMember key={person.name} {...person} />)}
-            <div className={"flex-pad"}/>
-        </div>
+        )
     }
 
     return (
@@ -106,11 +113,10 @@ function TeamList({teamList, children}) {
                 {children}
             </div>
             <div>
-                {teamListRender}
+                {rows}
             </div>
         </>
     )
-        ;
 }
 
 export default function Team() {
