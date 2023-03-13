@@ -87,7 +87,22 @@ function TeamList({teamList, children}) {
     const [mounted, setMounted] = useState(false)
     useEffect(() => setMounted(true), [])
 
-    if (!mounted) return null;
+    if (!mounted) {
+        // render just the first person in the list
+        const firstPerson = teamList[0]
+        return (<>
+                <div className={"centred cont-md"}>
+                    {children}
+                </div>
+                <div className={"hflex"}>
+                    <div className={"flex-pad"}/>
+                    <TeamMember {...firstPerson}/>
+                    <div className={"flex-pad"}/>
+                </div>
+            </>
+        )
+
+    }
 
     const numberOfColumns = Math.floor(width / columnWidth)
     console.log("numberOfColumns", numberOfColumns)
