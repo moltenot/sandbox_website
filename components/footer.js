@@ -8,7 +8,7 @@ export default function Footer() {
       <div className={`cont-md ${styles.container}`}>
         <FooterList headerText={"Legal"}>
           <ul>
-            <li>Terms and Conditions</li>
+            <li><Link href={"/bookingcancellation"}>Terms and Conditions</Link></li>
             <li>Booking and Cancellation</li>
             <li>Website and Privacy</li>
           </ul>
