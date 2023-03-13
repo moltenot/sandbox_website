@@ -1,11 +1,12 @@
 .image {
   object-fit: cover;
-  /* filter: brightness(0.9); */
+   filter: brightness(0.8);
 }
 
 .root {
   height: calc(100vh - var(--navbar-height));
   position: relative;
+  max-height: 40rem;
 }
 
 .textcontainer {

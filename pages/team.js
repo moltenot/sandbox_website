@@ -16,19 +16,6 @@ import lorenzo from "@/public/people/lorenzo.jpg"
 
 const FOH = [
     {
-        imageSrc: peter,
-        name: "Peter Molteno",
-        role: "Engineer | COO | Co-founder",
-        links: [<Insta key={"ig"} link={'https://www.instagram.com/__petes_produce_/'}/>],
-        bio: <div>
-            <p>Peter is an audio engineer and co-founder of Sandbox Studio. His expertise in analogue audio processing
-                has helped the studio develop a signature warm and rich sound, setting it apart from other recording
-                facilities.
-            </p>
-        </div>
-
-    },
-    {
         imageSrc: benni,
         name: "Benni Krueger",
         role: "Engineer | CEO | Founder",
@@ -40,22 +27,38 @@ const FOH = [
             Sandbox Studio as a premier recording facility. Benni's contributions to the music community have been
             widely recognized, and he continues to inspire aspiring audio engineers and musicians with his talent and
             commitment. </p>
+    },
+    {
+        imageSrc: peter,
+        name: "Peter Molteno",
+        role: "Engineer | COO | Co-founder",
+        links: [<Insta key={"ig"} link={'https://www.instagram.com/__petes_produce_/'}/>],
+        bio: <div>
+            <p>Peter is an audio engineer and co-founder of Sandbox Studio. His expertise in analogue audio processing
+                has helped the studio develop a signature warm and rich sound, setting it apart from other recording
+                facilities.
+            </p>
+        </div>
+
     }
 ]
 
+const defaultBio = <p>Can put a bio here if they want</p>
 const COOKS = [
     {
         imageSrc: ateo,
         name: "Ateo Buhne",
         role: "Drummer",
-        links: [<Insta key={"ig"} link={"https://www.instagram.com/ateo.music/"}/>]
+        links: [<Insta key={"ig"} link={"https://www.instagram.com/ateo.music/"}/>],
+        bio: defaultBio
     },
     {
         imageSrc: daniela,
         name: "Daniela Mogin",
         role: "Pianist",
         links: [<Facebook link={"https://www.facebook.com/daniela.mogin"} key={"fb"}/>,
-            <Insta link={"https://www.instagram.com/hey_dani_dani/"} key={"ig"}/>]
+            <Insta link={"https://www.instagram.com/hey_dani_dani/"} key={"ig"}/>],
+        bio: defaultBio
     },
     {
         imageSrc: briar,
@@ -63,19 +66,21 @@ const COOKS = [
         role: "Vocal Coach",
         links: [<Facebook key={"fb"} link={"https://www.facebook.com/briar.prastiti"}/>,
             <Insta key={"ig"} link={"https://www.instagram.com/hydrabitch/"}/>,
-            <Website key={"web"} link={"https://www.briarprastiti.com/"}/>]
+            <Website key={"web"} link={"https://www.briarprastiti.com/"}/>],
+        bio: defaultBio
     },
     {
         imageSrc: lorenzo,
         name: "Lorenzo Buhne",
         role: "Mix Engineer",
-        links: [<Facebook key={"fb"} link={"https://www.facebook.com/lorenzo.buhne.5"}/>]
+        links: [<Facebook key={"fb"} link={"https://www.facebook.com/lorenzo.buhne.5"}/>],
+        bio: defaultBio
     }
 ]
 
 function TeamList({teamList, children}) {
 
-    const columnWidth = IMAGE_DIM + 30 // roughly the width of a team member in pixels, maybe a bit more
+    const columnWidth = IMAGE_DIM + 35 // roughly the width of a team member in pixels, maybe a bit more
 
     const {width} = useWindowDimensions()
     const [mounted, setMounted] = useState(false)
@@ -84,6 +89,7 @@ function TeamList({teamList, children}) {
     if (!mounted) return null;
 
     const numberOfColumns = Math.floor(width / columnWidth)
+    console.log("numberOfColumns", numberOfColumns)
 
     const numberOfRows = Math.ceil(teamList.length / numberOfColumns)
     if (numberOfRows === 0) return null;
@@ -99,7 +105,7 @@ function TeamList({teamList, children}) {
             curRow.push(<TeamMember key={i + numberOfColumns * j} {...teamList[i * numberOfColumns + j]}/>)
         }
         rows.push(
-            <div className={`${styles.teamlistdesktop} hflex`} key={i} >
+            <div className={`${styles.personrow} hflex`} key={i}>
                 <div className={"flex-pad"}/>
                 {curRow}
                 <div className={"flex-pad"}/>
