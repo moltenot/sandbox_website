@@ -1,5 +1,4 @@
 import Navigation from "@/components/navigation";
-import useWindowDimensions from "@/hooks/windowDimensions";
 import styles from "@/styles/menu.module.css";
 import { useEffect, useState } from "react";
 
@@ -26,13 +25,8 @@ const foodToolTip =
 export default function Menu() {
 
   const [mounted, setMounted] = useState(false)
-  const {width, height} = useWindowDimensions()
 
   useEffect(() => setMounted(true), [])
-
-  const breakpoint = 480
-  const singleColumn = width < breakpoint
-
 
   if (!mounted) return <div/>
 

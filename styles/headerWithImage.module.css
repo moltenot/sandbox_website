@@ -1,0 +1,34 @@
+.root {
+    width: 100%;
+    height: 20rem;
+    position: relative;
+}
+
+.root h1 {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.root > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+/*for mobile make the header text smaller*/
+@media only screen and (max-width: 768px) {
+    .root h1 {
+        font-size: 3rem;
+
+    }
+
+    .root {
+        height: 15rem;
+    }
+}
