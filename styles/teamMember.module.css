@@ -1,6 +1,6 @@
 
 .root {
-    margin: 2rem;
+    margin: 0;
     padding: 1rem;
     width: 300px;
     text-align: justify;
@@ -10,7 +10,6 @@
 .sociallinks {
     display: flex;
     flex-direction: row;
-
 }
 
 .sociallinks > div {

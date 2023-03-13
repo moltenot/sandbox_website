@@ -1,0 +1,7 @@
+.teamlistdesktop {
+    flex-wrap: wrap;
+}
+
+.teamlistdesktop > div {
+    margin: 1rem;
+}

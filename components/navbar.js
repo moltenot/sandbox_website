@@ -14,7 +14,7 @@ export const PATHS = [
 ];
 export default function Navbar() {
   const { width } = useWindowDimensions();
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
 
   return (

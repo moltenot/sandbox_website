@@ -1,4 +1,3 @@
-import Image from "next/image";
 import mastering from "@/public/journey/mastering.jpg";
 import styles from "@/styles/albumShowcase.module.css";
 import SubtleButton from "../subtleButton";
@@ -142,7 +141,7 @@ const SIZE = 150;
 export default function AlbumShowcase() {
   const [mounted, setMounted] = useState(false);
   const [expanded, setExpanded] = useState(false);
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
     setMounted(true);
