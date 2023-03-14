@@ -1,5 +1,8 @@
 import Navigation from "@/components/navigation";
 import Grid from "@/components/grid";
+import HeaderWithImage from "@/components/sections/headerWithImage";
+
+import drumming from "@/public/drumming.jpg"
 
 const INSTRUMETS = [
     {
@@ -78,17 +81,22 @@ function GearList({title, list}) {
     return (
         <>
             <div style={{
-                backgroundColor:"lightblue",
                 width: "300px",
                 maxWidth: "400px",
                 flex: "auto",
             }}>
-                <h2>{title}</h2>
-                <ul>
-                    {list.map((item, index) => {
-                        return <li key={index}>{item}</li>
-                    })}
-                </ul>
+                <div style={{
+                    backgroundColor:"var(--light-gray)",
+                    margin: "5px",
+                    padding: "1rem"
+                }}>
+                    <h2>{title}</h2>
+                    <ul>
+                        {list.map((item, index) => {
+                            return <li key={index}>{item}</li>
+                        })}
+                    </ul>
+                </div>
             </div>
         </>
     );
@@ -112,6 +120,7 @@ export default function Gear() {
 
 
                 </div>
+                <HeaderWithImage imageSrc={drumming} alt={"drumming"} headerText={"HARDWARE"} />
                 <Grid width={400}>
                     <GearList title="Microphones" list={HARDWARE.Microphones}/>
                     <GearList title="Preamps" list={HARDWARE.Preamps}/>
@@ -119,6 +128,7 @@ export default function Gear() {
                     <GearList title="Equalisers, De-essers & Saturators"
                               list={HARDWARE["Equalisers, De-essers & Saturators"]}/>
                 </Grid>
+
             </Navigation>
         </>
     );

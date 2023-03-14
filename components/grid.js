@@ -30,7 +30,7 @@ export default function Grid({children, width}) {
     }
 
     // set the number of rows and columns needed based on the window width
-    let numColumns = Math.floor(windowWidth / width)
+    let numColumns = Math.max(Math.floor(windowWidth / width),1 )
     let numRows = Math.ceil(children.length / numColumns);
 
     if (calculateEmptySlots(numColumns, numRows) > calculateEmptySlots(numColumns - 1, numRows)) {

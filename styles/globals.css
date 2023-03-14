@@ -83,6 +83,10 @@ a {
   text-decoration-line: none;
 }
 
+a:hover {
+  color: rgba(0,0,0,0.5);
+}
+
 span.italics {
   font-style: italic;
 }
