@@ -1,4 +1,5 @@
 import Navigation from "@/components/navigation";
+import Grid from "@/components/grid";
 
 const INSTRUMETS = [
     {
@@ -76,7 +77,12 @@ const HARDWARE = {
 function GearList({title, list}) {
     return (
         <>
-            <div>
+            <div style={{
+                backgroundColor:"lightblue",
+                width: "300px",
+                maxWidth: "400px",
+                flex: "auto",
+            }}>
                 <h2>{title}</h2>
                 <ul>
                     {list.map((item, index) => {
@@ -92,7 +98,7 @@ export default function Gear() {
     return (
         <>
             <Navigation>
-                <div className="cont-md justified">
+                <div className="cont-md">
                     <p>Sandbox Studio is a recording facility in New Zealand that boasts an extensive collection of
                         analogue recording equipment, including 150 microphones, 30 preamps, and 20 processors. The
                         studio features renowned brands such as Neumann, Neve, SSL, Sony, Universal Audio, Focusrite,
@@ -105,12 +111,14 @@ export default function Gear() {
                         while also receiving quality, affordable services.</p>
 
 
+                </div>
+                <Grid width={400}>
                     <GearList title="Microphones" list={HARDWARE.Microphones}/>
                     <GearList title="Preamps" list={HARDWARE.Preamps}/>
                     <GearList title="Compressors" list={HARDWARE.Compressors}/>
                     <GearList title="Equalisers, De-essers & Saturators"
                               list={HARDWARE["Equalisers, De-essers & Saturators"]}/>
-                </div>
+                </Grid>
             </Navigation>
         </>
     );
