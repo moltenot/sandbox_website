@@ -161,11 +161,9 @@ export default function AlbumShowcase() {
     } else {
         columns = Math.floor(width / SIZE);
     }
-    console.log({columns});
     const maxHeight = mobile ? 500 : 800;
     // set the number of rows such that we don't exceed max height or run out of albums
     let maxRows = Math.min(Math.floor(ALBUMS.length / columns), Math.floor(maxHeight / SIZE));
-    console.log({maxRows})
 
     if (!mounted) {
         return null;

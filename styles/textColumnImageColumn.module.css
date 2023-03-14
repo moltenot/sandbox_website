@@ -3,7 +3,6 @@
   display: flex;
   padding-top: var(--padding);
   padding-bottom: var(--padding);
-  min-height: 50vh;
   position: relative;
 }
 

@@ -100,7 +100,6 @@ function TeamList({teamList, children}) {
     }
 
     const numberOfColumns = Math.floor(width / columnWidth)
-    console.log("numberOfColumns", numberOfColumns)
 
     const numberOfRows = Math.ceil(teamList.length / numberOfColumns)
     if (numberOfRows === 0) return null;
