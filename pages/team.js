@@ -141,15 +141,9 @@ export default function Team() {
             <Navigation>
 
                 <TeamList teamList={FOH}>
-                    <h1>FRONT OF HOUSE</h1>
-                    {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    <p className="justified">You couldn't have a better crew to take care of you on your creative process, our front of house staff have years of experience
-                        helping you make excellent tunes</p>
                 </TeamList>
 
                 <TeamList teamList={COOKS}>
-                    <h1>BACK OF HOUSE</h1>
-                    <p>These fellas are where the rubber meets the road for the Sandbox Studio sound</p>
                 </TeamList>
 
             </Navigation>

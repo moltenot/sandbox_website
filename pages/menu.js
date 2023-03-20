@@ -37,7 +37,7 @@ export default function Menu() {
           <div className={`${styles.container}`} >
             <div className="flex-pad"/>
             <div id="food">
-              <h1 className="centred">FOOD</h1>
+              <h1 className="centred">AUDIO</h1>
               <ol>
                 <li>
                   <MenuItem
@@ -97,7 +97,7 @@ CD, or Vinyl."
             <div className="flex-pad" style={{maxWidth: "25px"}}/>
 
             <div id="drinks">
-              <h1 className="centred">DRINKS</h1>
+              <h1 className="centred">VISUAL</h1>
               <ol>
                 <li>
                   <MenuItem

@@ -4,62 +4,64 @@ import Link from "next/link";
 import logo from "../public/black_logo.png";
 import NavLink from "./navlink";
 import hamburger from "@/public/hamburger.svg";
-import { useState } from "react";
+import {useState} from "react";
 import useWindowDimensions from "@/hooks/windowDimensions";
 
 export const PATHS = [
-  { text: "THE MENU", path: "/menu" },
-  { text: "FRONT OF HOUSE", path: "/team" },
-  { text: "GEAR", path: "/gear" },
+    {text: "PEOPLE", path: "/team"},
+    {text: "GEAR", path: "/gear"},
+    {text: "LISTEN", path: "/listen"},
+    {text: "MENU", path: "/menu"},
+    {text: "CONTACT", path: "/contact"},
 ];
 export default function Navbar() {
-  const { width } = useWindowDimensions();
-  const [expanded, setExpanded] = useState(false);
+    const {width} = useWindowDimensions();
+    const [expanded, setExpanded] = useState(false);
 
 
-  return (
-    <div className={styles.navroot}>
-      <div className={`${styles.fixed} full-width`}>
-      <div className={`${styles.navbar} full-width vflex`}>
-        <div className="padder" />
-        <div>
-          <div className="cont-lg hflex">
-            <Link href={"/"}>
-              <Image src={logo} alt="Sandbox Studios Logo" height={40} />
-            </Link>
-            <div className="flex-pad" />
-            <div className="vflex">
-              <div className="padder" />
-              <Image
-                src={hamburger}
-                className={`${styles.burger} hoverable`}
-                alt="Hamburger icon"
-                onClick={() => setExpanded(!expanded)}
-              />
-              <div className="padder" />
+    return (
+        <div className={styles.navroot}>
+            <div className={`${styles.fixed} full-width`}>
+                <div className={`${styles.navbar} full-width vflex`}>
+                    <div className="padder"/>
+                    <div>
+                        <div className="cont-lg hflex">
+                            <Link href={"/"}>
+                                <Image src={logo} alt="Sandbox Studios Logo" height={40}/>
+                            </Link>
+                            <div className="flex-pad"/>
+                            <div className="vflex">
+                                <div className="padder"/>
+                                <Image
+                                    src={hamburger}
+                                    className={`${styles.burger} hoverable`}
+                                    alt="Hamburger icon"
+                                    onClick={() => setExpanded(!expanded)}
+                                />
+                                <div className="padder"/>
+                            </div>
+                            <div className={styles.navlinkcontainer}>
+                                {PATHS.map(({path, text}) => (
+                                    <NavLink path={path} text={text} key={text}/>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="padder"/>
+                </div>
+                <div>
+                    <div
+                        className={styles.navlinkoverflow}
+                        style={{
+                            display: expanded && width < 480 ? "block" : "none",
+                        }}
+                    >
+                        {PATHS.map(({path, text}) => (
+                            <NavLink path={path} text={text} key={text}/>
+                        ))}
+                    </div>
+                </div>
             </div>
-            <div className={styles.navlinkcontainer}>
-              {PATHS.map(({ path, text }) => (
-                <NavLink path={path} text={text} key={text} />
-              ))}
-            </div>
-          </div>
         </div>
-        <div className="padder" />
-      </div>
-      <div>
-        <div
-          className={styles.navlinkoverflow}
-          style={{
-            display: expanded && width < 480 ? "block" : "none",
-          }}
-        >
-          {PATHS.map(({ path, text }) => (
-            <NavLink path={path} text={text} key={text} />
-          ))}
-        </div>
-      </div>
-      </div>
-    </div>
-  );
+    );
 }
