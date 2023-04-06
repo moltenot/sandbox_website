@@ -11,6 +11,12 @@ import TeamMember from "@/components/teamMember";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import BasicSection from "@/components/sections/basicSection";
+import ReactAudioPlayer from "react-audio-player";
+
+// import audio1 from "@/public/audio/bensound-adayout.mp3"
+// import audio2 from "@/public/audio/Corwin Trails - Pop.mp3"
+// import audio3 from "@/public/audio/Metal Mountains - Structures In The Sun.mp3"
+// import audio4 from "@/public/audio/Rock Monsieur - tututu lalala.mp3"
 
 const people = [
     {
@@ -71,15 +77,14 @@ export default function Home() {
                 <TeamMember {...people[0]}/>
                 <TeamMember {...people[1]}/>
             </BasicSection>
-            <section id="gear">
-                <h1>Gear</h1>
+            <BasicSection id={"gear"} header={"Gear"} backgroundColor={"white"}>
                 <p>a few pieces of nice gear that we have, and a button to the gear page</p>
                 <Link href={"/gear"}>Check out the full gear list</Link>
-            </section>
-            <section id="listen">
-                <h1>Listen</h1>
-                <p>A smorgasboard of sound</p>
-            </section>
+            </BasicSection>
+            <BasicSection id="listen" header={"Listen"} backgroundColor={"gray"}>
+                <p>Check out some of the sounds that have gone through the Sandbox Studio</p>
+                <ReactAudioPlayer controls src={"/audio/bensound-adayout.mp3"}/>
+            </BasicSection>
             <section id="menu">
                 <h1>Pricing</h1>
                 <p>A few things you can buy from us</p>

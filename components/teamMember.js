@@ -5,8 +5,8 @@ export const IMAGE_DIM = 200
 
 export default function TeamMember({imageSrc, name, role, links, bio}) {
     return <div className={styles.root}>
-        <div className={`${styles.container} hflex`}>
-            <Image src={imageSrc} style={{objectFit: "cover"}} alt={`photo of ${name}`} width={IMAGE_DIM}
+        <div className={`${styles.container}`}>
+            <Image src={imageSrc} className={styles.img} style={{objectFit: "cover"}} alt={`photo of ${name}`} width={IMAGE_DIM}
                    height={IMAGE_DIM}/>
             <div className="cont-md">
                 <h2>{name}</h2>
