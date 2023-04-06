@@ -1,4 +1,3 @@
-import Navigation from "@/components/navigation";
 import Hero from "@/components/sections/hero";
 import guitars from "@/public/guitars.jpg";
 import TextColumnImageColumn from "@/components/sections/textcolumnimagecolumn";

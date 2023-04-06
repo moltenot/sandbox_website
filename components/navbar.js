@@ -45,9 +45,9 @@ export default function Navbar({sections}) {
                                 <div className="padder"/>
                             </div>
                             <div className={styles.navlinkcontainer}>
-                                {paths.map(({path, text}) => (
+                                {paths?paths.map(({path, text}) => (
                                     <NavLink path={path} text={text} key={text}/>
-                                ))}
+                                )): null}
                             </div>
                         </div>
                     </div>
@@ -60,9 +60,9 @@ export default function Navbar({sections}) {
                             display: expanded && width < 480 ? "block" : "none",
                         }}
                     >
-                        {paths.map(({path, text}) => (
+                        {paths?paths.map(({path, text}) => (
                             <NavLink path={path} text={text} key={text}/>
-                        ))}
+                        )):null}
                     </div>
                 </div>
             </div>
