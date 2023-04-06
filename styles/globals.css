@@ -2,6 +2,7 @@
   --navbar-height: 64px;
   --container-padding: 0.5rem;
   --light-gray: whitesmoke;
+  --dark-light-gray: rgb(231, 231, 231);
 }
 
 h1 {

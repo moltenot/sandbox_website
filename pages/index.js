@@ -12,6 +12,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import BasicSection from "@/components/sections/basicSection";
 import ReactAudioPlayer from "react-audio-player";
+import HorizontalCards from "@/components/sections/horizontalCards";
 
 // import audio1 from "@/public/audio/bensound-adayout.mp3"
 // import audio2 from "@/public/audio/Corwin Trails - Pop.mp3"
@@ -71,7 +72,7 @@ export default function Home() {
                     </p>
                 </TextColumnImageColumn>
             </section>
-            <BasicSection id="people" header="Meet the team" backgroundColor={"gray"}>
+            <BasicSection id="people" header="Meet the team" backgroundColor={"var(--dark-light-gray)"}>
                 <p>Sandbox Studio is jointly run by studio engineers Benni Krueger and Peter Molteno
                 </p>
                 <TeamMember {...people[0]}/>
@@ -79,6 +80,11 @@ export default function Home() {
             </BasicSection>
             <BasicSection id={"gear"} header={"Gear"} backgroundColor={"white"}>
                 <p>a few pieces of nice gear that we have, and a button to the gear page</p>
+                <HorizontalCards>
+                    <p>piece of gear 1</p>
+                    <p>piece of gear 2</p>
+                    <p>piece of gear 3</p>
+                </HorizontalCards>
                 <Link href={"/gear"}>Check out the full gear list</Link>
             </BasicSection>
             <BasicSection id="listen" header={"Listen"} backgroundColor={"gray"}>

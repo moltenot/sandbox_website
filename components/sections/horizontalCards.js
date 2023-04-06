@@ -1,11 +1,10 @@
 import styles from "@/styles/horizontalCards.module.css";
-export default function HorizontalCards({ children, cards }) {
+export default function HorizontalCards({ children }) {
   return (
     <>
-      <div className={`${styles.textcontainer} cont-md`}>{children}</div>
       <div className={styles.scrollcontainer}>
         <div className="flex-pad" />
-        {cards}
+        {children}
         <div className="flex-pad" />
       </div>
     </>
