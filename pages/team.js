@@ -15,33 +15,7 @@ import briar from "@/public/people/briar.jpg"
 import lorenzo from "@/public/people/lorenzo.jpg"
 
 const FOH = [
-    {
-        imageSrc: benni,
-        name: "Benni Krueger",
-        role: "Engineer | CEO | Founder",
-        links: [<Facebook key={"fb"} link={"https://www.facebook.com/benni.krueger/"}/>,
-            <Insta key={"ig"} link={"https://www.instagram.com/bennikrueger.art/"}/>,
-            <Website link={"https://bennikrueger.com/"} key={"web"}/>],
-        bio: <p>Benni Krueger is a co-founder of Sandbox Studio and an accomplished audio engineer with a passion for
-            music. His technical expertise in audio production and dedication to excellence have helped establish
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            Sandbox Studio as a premier recording facility. Benni's contributions to the music community have been
-            widely recognized, and he continues to inspire aspiring audio engineers and musicians with his talent and
-            commitment. </p>
-    },
-    {
-        imageSrc: peter,
-        name: "Peter Molteno",
-        role: "Engineer | COO | Co-founder",
-        links: [<Insta key={"ig"} link={'https://www.instagram.com/__petes_produce_/'}/>],
-        bio: <div>
-            <p>Peter is an audio engineer and co-founder of Sandbox Studio. His expertise in analogue audio processing
-                has helped the studio develop a signature warm and rich sound, setting it apart from other recording
-                facilities.
-            </p>
-        </div>
 
-    }
 ]
 
 const COOKS = [

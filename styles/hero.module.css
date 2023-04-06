@@ -6,7 +6,6 @@
 .root {
   height: calc(100vh - var(--navbar-height));
   position: relative;
-  max-height: 40rem;
 }
 
 .textcontainer {

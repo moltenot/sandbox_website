@@ -2,97 +2,91 @@ import Navigation from "@/components/navigation";
 import Hero from "@/components/sections/hero";
 import guitars from "@/public/guitars.jpg";
 import TextColumnImageColumn from "@/components/sections/textcolumnimagecolumn";
-import HorizontalCards from "@/components/sections/horizontalCards";
-import TallCard from "@/components/tallCard";
+import Link from "next/link";
+import Facebook from "@/components/sociallinks/facebook";
+import Insta from "@/components/sociallinks/insta";
+import Website from "@/components/sociallinks/website";
+import benni from "@/public/people/benni.jpg"
+import peter from "@/public/people/peter.jpg"
+import TeamMember from "@/components/teamMember";
 
-import pre_production from "@/public/journey/pre_production.jpg";
-import production from "@/public/journey/production.jpg";
-import post_production from "@/public/journey/post_production.jpg";
-import mastering from "@/public/journey/mastering.jpg";
-import Logos from "@/components/sections/logos";
+const people = [
+    {
+        imageSrc: benni,
+        name: "Benni Krueger",
+        role: "Engineer | CEO | Founder",
+        links: [<Facebook key={"fb"} link={"https://www.facebook.com/benni.krueger/"}/>,
+            <Insta key={"ig"} link={"https://www.instagram.com/bennikrueger.art/"}/>,
+            <Website link={"https://bennikrueger.com/"} key={"web"}/>],
+        bio: <p>Benni Krueger is a co-founder of Sandbox Studio and an accomplished audio engineer with a passion for
+            music. His technical expertise in audio production and dedication to excellence have helped establish
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            Sandbox Studio as a premier recording facility. Benni's contributions to the music community have been
+            widely recognized, and he continues to inspire aspiring audio engineers and musicians with his talent and
+            commitment. </p>
+    },
+    {
+        imageSrc: peter,
+        name: "Peter Molteno",
+        role: "Engineer | COO | Co-founder",
+        links: [<Insta key={"ig"} link={'https://www.instagram.com/__petes_produce_/'}/>],
+        bio: <div>
+            <p>Peter is an audio engineer and co-founder of Sandbox Studio. His expertise in analogue audio processing
+                has helped the studio develop a signature warm and rich sound, setting it apart from other recording
+                facilities.
+            </p>
+        </div>
 
+    }
+]
 
 export default function Home() {
-  return (
-    <>
-      <Navigation>
-        <Hero />
-        <TextColumnImageColumn alt="guitars on a wall" image={guitars}>
-          <h1>Welcome to Sandbox Studios</h1>
-          <p>
-            Located in the heart of Wellington City, we deliver a complete range
-            of audio and music production services. Are you looking to record
-            music, podcasts, audiobooks, dialogue, or voice overs? Sandbox
-            Studio makes your production fast, reliable, and affordable.
-          </p>
-          <p>
-            If you’re looking for a low-key comfortable space to be creative and
-            if you’re looking to combine this with audiophile goodness and
-            supportive people who work fast, reliable and know every inch of
-            their craft, then Sandbox Studio is your ticket to success.
-          </p>
-        </TextColumnImageColumn>
-        <HorizontalCards
-          cards={[
-            <TallCard
-              key={"pre"}
-              imageSrc={pre_production}
-              alt={"a photo of a rack of pedals"}
-              header={"Pre Production"}
-              paragraph="we do preproduction"
-            ></TallCard>,
-            <TallCard
-              key={"prod"}
-              imageSrc={production}
-              alt="photo of a computer screen running a DAW"
-              header={"Production"}
-              paragraph="we also produce, check out pete's produce for the details"
-            />,
-            <TallCard
-              key={"post"}
-              imageSrc={post_production}
-              alt="photo of an on air sign"
-              header="Post Production"
-              paragraph="we can do post production"
-            />,
-            <TallCard
-              key={"mastering"}
-              imageSrc={mastering}
-              alt="photo from behind a desk"
-              header={"Mastering"}
-              paragraph="we can master the hell out of your song, try us I dare you"
-            />,
-            <TallCard
-              key={"packaging"}
-              imageSrc={mastering}
-              alt="packaging and design image"
-              header={"Packaging & Design"}
-              paragraph="Packaging & Design"
-            />,
-            <TallCard
-              key={"release"}
-              imageSrc={mastering}
-              alt="release image"
-              header={"Release"}
-              paragraph="Release Plan
-            Streaming Platforms
-            Marketing & Promo"
-            />,
-          ]}
-        >
-          <h1>
-            <span className="italics">Your</span> journey, from start to end
-          </h1>
-          <p>
-            Discover a seamless journey from pre-production to release with our
-            music studio. Our team of experts will help you refine your sound in
-            the pre-production stage and assist you in delivering a polished
-            final product. Let us elevate your music to the next level with our
-            tailored approach.
-          </p>
-        </HorizontalCards>
-        <Logos />
-      </Navigation>
-    </>
-  );
+    return (
+        <>
+            <Navigation>
+                <Hero/>
+                <section id="welcome">
+                    <TextColumnImageColumn alt="guitars on a wall" image={guitars}>
+                        <h1>Welcome to Sandbox Studios</h1>
+                        <p>
+                            Located in the heart of Wellington City, we deliver a complete range
+                            of audio and music production services. Are you looking to record
+                            music, podcasts, audiobooks, dialogue, or voice overs? Sandbox
+                            Studio makes your production fast, reliable, and affordable.
+                        </p>
+                        <p>
+                            If you’re looking for a low-key comfortable space to be creative and
+                            if you’re looking to combine this with audiophile goodness and
+                            supportive people who work fast, reliable and know every inch of
+                            their craft, then Sandbox Studio is your ticket to success.
+                        </p>
+                    </TextColumnImageColumn>
+                </section>
+                <section id="people">
+                    <h1>People</h1>
+                    <p>these are the people you'd be working with</p>
+                    <TeamMember {...people[0]}/>
+                    <TeamMember {...people[1]}/>
+                </section>
+                <section id="gear">
+                    <h1>Gear</h1>
+                    <p>a few pieces of nice gear that we have, and a button to the gear page</p>
+                    <Link href={"/gear"}>Check out the full gear list</Link>
+                </section>
+                <section id="listen">
+                    <h1>Listen</h1>
+                    <p>A smorgasboard of sound</p>
+                </section>
+                <section id="menu">
+                    <h1>Pricing</h1>
+                    <p>A few things you can buy from us</p>
+                    <Link href={"/menu.pdf"}>See the full menu</Link>
+                </section>
+                <section id="contact">
+                    <h1>Contact</h1>
+                    <p>Contact us now to get your project on the road</p>
+                </section>
+            </Navigation>
+        </>
+    );
 }
