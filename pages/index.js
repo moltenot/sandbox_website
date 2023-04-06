@@ -63,11 +63,14 @@ export default function Home() {
                     </TextColumnImageColumn>
                 </section>
                 <section id="people">
-                    <h1>People</h1>
-                    {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    <p>these are the people you'd be working with</p>
-                    <TeamMember {...people[0]}/>
-                    <TeamMember {...people[1]}/>
+                    <div className="cont-lg">
+                        <h1>Meet the team</h1>
+                        {/* eslint-disable-next-line react/no-unescaped-entities */}
+                        <p>Sandbox Studio is jointly run by studio engineers Benni Krueger and Peter Molteno
+                        </p>
+                        <TeamMember {...people[0]}/>
+                        <TeamMember {...people[1]}/>
+                    </div>
                 </section>
                 <section id="gear">
                     <h1>Gear</h1>
