@@ -7,8 +7,6 @@ import styles from "@/styles/team.module.css"
 import useWindowDimensions from "@/hooks/windowDimensions";
 import {useEffect, useState} from "react";
 
-import benni from "@/public/people/benni.jpg"
-import peter from "@/public/people/peter.jpg"
 import ateo from "@/public/people/ateo.jpg"
 import daniela from "@/public/people/daniela.jpg"
 import briar from "@/public/people/briar.jpg"
