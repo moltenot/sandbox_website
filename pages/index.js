@@ -9,6 +9,8 @@ import Website from "@/components/sociallinks/website";
 import benni from "@/public/people/benni.jpg"
 import peter from "@/public/people/peter.jpg"
 import TeamMember from "@/components/teamMember";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const people = [
     {
@@ -41,56 +43,57 @@ const people = [
 ]
 
 export default function Home() {
+    const sections = ["welcome", "people", "gear", "listen", "menu", "contact"]
     return (
         <>
-            <Navigation>
-                <Hero/>
-                <section id="welcome">
-                    <TextColumnImageColumn alt="guitars on a wall" image={guitars}>
-                        <h1>Welcome to Sandbox Studios</h1>
-                        <p>
-                            Located in the heart of Wellington City, we deliver a complete range
-                            of audio and music production services. Are you looking to record
-                            music, podcasts, audiobooks, dialogue, or voice overs? Sandbox
-                            Studio makes your production fast, reliable, and affordable.
-                        </p>
-                        <p>
-                            If you’re looking for a low-key comfortable space to be creative and
-                            if you’re looking to combine this with audiophile goodness and
-                            supportive people who work fast, reliable and know every inch of
-                            their craft, then Sandbox Studio is your ticket to success.
-                        </p>
-                    </TextColumnImageColumn>
-                </section>
-                <section id="people">
-                    <div className="cont-lg">
-                        <h1>Meet the team</h1>
-                        {/* eslint-disable-next-line react/no-unescaped-entities */}
-                        <p>Sandbox Studio is jointly run by studio engineers Benni Krueger and Peter Molteno
-                        </p>
-                        <TeamMember {...people[0]}/>
-                        <TeamMember {...people[1]}/>
-                    </div>
-                </section>
-                <section id="gear">
-                    <h1>Gear</h1>
-                    <p>a few pieces of nice gear that we have, and a button to the gear page</p>
-                    <Link href={"/gear"}>Check out the full gear list</Link>
-                </section>
-                <section id="listen">
-                    <h1>Listen</h1>
-                    <p>A smorgasboard of sound</p>
-                </section>
-                <section id="menu">
-                    <h1>Pricing</h1>
-                    <p>A few things you can buy from us</p>
-                    <Link href={"/menu.pdf"}>See the full menu</Link>
-                </section>
-                <section id="contact">
-                    <h1>Contact</h1>
-                    <p>Contact us now to get your project on the road</p>
-                </section>
-            </Navigation>
+            <Navbar sections={sections}/>
+            <Hero/>
+            <section id="welcome">
+                <TextColumnImageColumn alt="guitars on a wall" image={guitars}>
+                    <h1>Welcome to Sandbox Studios</h1>
+                    <p>
+                        Located in the heart of Wellington City, we deliver a complete range
+                        of audio and music production services. Are you looking to record
+                        music, podcasts, audiobooks, dialogue, or voice overs? Sandbox
+                        Studio makes your production fast, reliable, and affordable.
+                    </p>
+                    <p>
+                        If you’re looking for a low-key comfortable space to be creative and
+                        if you’re looking to combine this with audiophile goodness and
+                        supportive people who work fast, reliable and know every inch of
+                        their craft, then Sandbox Studio is your ticket to success.
+                    </p>
+                </TextColumnImageColumn>
+            </section>
+            <section id="people">
+                <div className="cont-lg">
+                    <h1>Meet the team</h1>
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                    <p>Sandbox Studio is jointly run by studio engineers Benni Krueger and Peter Molteno
+                    </p>
+                    <TeamMember {...people[0]}/>
+                    <TeamMember {...people[1]}/>
+                </div>
+            </section>
+            <section id="gear">
+                <h1>Gear</h1>
+                <p>a few pieces of nice gear that we have, and a button to the gear page</p>
+                <Link href={"/gear"}>Check out the full gear list</Link>
+            </section>
+            <section id="listen">
+                <h1>Listen</h1>
+                <p>A smorgasboard of sound</p>
+            </section>
+            <section id="menu">
+                <h1>Pricing</h1>
+                <p>A few things you can buy from us</p>
+                <Link href={"/menu.pdf"}>See the full menu</Link>
+            </section>
+            <section id="contact">
+                <h1>Contact</h1>
+                <p>Contact us now to get your project on the road</p>
+            </section>
+            <Footer/>
         </>
     );
 }

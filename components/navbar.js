@@ -1,24 +1,28 @@
 import styles from "@/styles/navbar.module.css";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import NavLink from "@/components/navlink";
 import logo from "../public/black_logo.png";
-import NavLink from "./navlink";
 import hamburger from "@/public/hamburger.svg";
-import {useState} from "react";
 import useWindowDimensions from "@/hooks/windowDimensions";
+import {useState} from "react";
 
-export const PATHS = [
-    {text: "PEOPLE", path: "/team"},
-    {text: "GEAR", path: "/gear"},
-    {text: "LISTEN", path: "/listen"},
-    {text: "MENU", path: "/menu"},
-    {text: "CONTACT", path: "/contact"},
-];
-export default function Navbar() {
+export default function Navbar({sections}) {
     const {width} = useWindowDimensions();
     const [expanded, setExpanded] = useState(false);
 
 
+    let paths = [];
+    console.log("sections", sections)
+    console.log("sections length", sections.length)
+    if (sections.length > 0) {
+        sections.forEach(section => {
+            paths.push({text: section.toUpperCase(), path: `#${section}`});
+        })
+    } else {
+        paths = undefined;
+    }
+    console.log("paths", paths)
     return (
         <div className={styles.navroot}>
             <div className={`${styles.fixed} full-width`}>
@@ -41,7 +45,7 @@ export default function Navbar() {
                                 <div className="padder"/>
                             </div>
                             <div className={styles.navlinkcontainer}>
-                                {PATHS.map(({path, text}) => (
+                                {paths.map(({path, text}) => (
                                     <NavLink path={path} text={text} key={text}/>
                                 ))}
                             </div>
@@ -56,7 +60,7 @@ export default function Navbar() {
                             display: expanded && width < 480 ? "block" : "none",
                         }}
                     >
-                        {PATHS.map(({path, text}) => (
+                        {paths.map(({path, text}) => (
                             <NavLink path={path} text={text} key={text}/>
                         ))}
                     </div>
