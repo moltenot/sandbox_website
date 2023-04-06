@@ -10,6 +10,7 @@ import peter from "@/public/people/peter.jpg"
 import TeamMember from "@/components/teamMember";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import BasicSection from "@/components/sections/basicSection";
 
 const people = [
     {
@@ -64,16 +65,12 @@ export default function Home() {
                     </p>
                 </TextColumnImageColumn>
             </section>
-            <section id="people">
-                <div className="cont-lg">
-                    <h1>Meet the team</h1>
-                    {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    <p>Sandbox Studio is jointly run by studio engineers Benni Krueger and Peter Molteno
-                    </p>
-                    <TeamMember {...people[0]}/>
-                    <TeamMember {...people[1]}/>
-                </div>
-            </section>
+            <BasicSection id="people" header="Meet the team" backgroundColor={"gray"}>
+                <p>Sandbox Studio is jointly run by studio engineers Benni Krueger and Peter Molteno
+                </p>
+                <TeamMember {...people[0]}/>
+                <TeamMember {...people[1]}/>
+            </BasicSection>
             <section id="gear">
                 <h1>Gear</h1>
                 <p>a few pieces of nice gear that we have, and a button to the gear page</p>

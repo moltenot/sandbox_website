@@ -1,6 +1,7 @@
 .navLink {
   display: flex;
   flex-direction: column;
+  font-size: 0.9rem;
   margin-left: 1em;
   text-align: center;
 }

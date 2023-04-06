@@ -13,8 +13,6 @@ export default function Navbar({sections}) {
 
 
     let paths = [];
-    console.log("sections", sections)
-    console.log("sections length", sections.length)
     if (sections.length > 0) {
         sections.forEach(section => {
             paths.push({text: section.toUpperCase(), path: `#${section}`});
@@ -22,7 +20,6 @@ export default function Navbar({sections}) {
     } else {
         paths = undefined;
     }
-    console.log("paths", paths)
     return (
         <div className={styles.navroot}>
             <div className={`${styles.fixed} full-width`}>
