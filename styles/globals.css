@@ -88,6 +88,10 @@ a {
   text-decoration-line: none;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 a:hover {
   color: rgba(0,0,0,0.5);
 }

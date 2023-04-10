@@ -13,6 +13,11 @@ import Footer from "@/components/footer";
 import BasicSection from "@/components/sections/basicSection";
 import ReactAudioPlayer from "react-audio-player";
 import HorizontalCards from "@/components/sections/horizontalCards";
+import TallCard from "@/components/tallCard";
+
+import drums from "@/public/drums.jpg"
+import piano from "@/public/piano.jpg"
+import isoBooth from "@/public/iso_booth.jpg"
 
 // import audio1 from "@/public/audio/bensound-adayout.mp3"
 // import audio2 from "@/public/audio/Corwin Trails - Pop.mp3"
@@ -53,6 +58,9 @@ export default function Home() {
     const sections = ["welcome", "people", "gear", "listen", "menu", "contact"]
     return (
         <>
+            <header>
+                <title>Sandbox Studio</title>
+            </header>
             <Navbar sections={sections}/>
             <Hero/>
             <section id="welcome">
@@ -79,13 +87,27 @@ export default function Home() {
                 <TeamMember {...people[1]}/>
             </BasicSection>
             <BasicSection id={"gear"} header={"Gear"} backgroundColor={"white"}>
-                <p>a few pieces of nice gear that we have, and a button to the gear page</p>
+                <p>One of the most important factors for any great recording is having the right choice of microphone. Sandbox Studio offers an extraordinary collection of 150 microphones, 30 preamps, 20 processors (compressors, equalisers, distortion boxes), all of which is analogue hardware.</p>
+
+                <p>The hardware found at Sandbox Studio includes some of the greatest recording equipment in history, with legendary names such as: Neumann, Neve, SSL, Sony, Universal Audio, Focusrite and Trident Audio Developments, just to mention a few.</p>
+                <p>As part of a commitment to the local music scene, we offer highly competitive artist rates, VO, and
+                    package deals, allowing anyone to make music using our gear.</p>
+
+                <p>In addition to the analogue gear, we have drums and a piano, <span className={"italics"}>tuned</span> to perfection.</p>
                 <HorizontalCards>
-                    <p>piece of gear 1</p>
-                    <p>piece of gear 2</p>
-                    <p>piece of gear 3</p>
+                    <TallCard imageSrc={drums} header={"Drums"}
+                              paragraph="Experience the impact of a beautiful sounding Mapex Armory drum kit. Our purpose-built riser decouples the drums from the floor, resulting in a clean and balanced sound. "
+                              alt={"photo of drums"}/>
+                    <TallCard imageSrc={piano} header={"Piano"}
+                              paragraph="Experience the flawless sound of our Weinbach piano, expertly maintained and tuned to perfection by our Founder and qualified Piano Tuner, Benni Krueger."
+                              alt={"photo of a piano"}/>
+                    <TallCard imageSrc={isoBooth} header={"Isolation Booth"}
+                              paragraph="Our best in class isolation booth is cozy, quiet, and equipped with the best microphones in the game"
+                              alt={"photo from the inside of the isolation booth"}/>
                 </HorizontalCards>
-                <Link href={"/gear"}>Check out the full gear list</Link>
+                <div style={{width: "fit-content", marginLeft: "auto"}}>
+                    <Link href={"/gear"} className={"hoverable underline"}>Check out the full gear list</Link>
+                </div>
             </BasicSection>
             <BasicSection id="listen" header={"Listen"} backgroundColor={"gray"}>
                 <p>Check out some of the sounds that have gone through the Sandbox Studio</p>
@@ -94,7 +116,7 @@ export default function Home() {
             <section id="menu">
                 <h1>Pricing</h1>
                 <p>A few things you can buy from us</p>
-                <Link href={"/menu.pdf"}>See the full menu</Link>
+                <Link href={"/menu.pdf"} className={"hoverable underline"}>See the full menu</Link>
             </section>
             <section id="contact">
                 <h1>Contact</h1>

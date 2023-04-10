@@ -1,5 +1,7 @@
 
 .root {
+    margin-left: auto;
+    margin-right: auto;
     width: fit-content;
     padding: 0.6rem;
 }
@@ -8,7 +10,7 @@
     padding: 1rem;
     display: flex;
     flex-direction: row;
-    background-color: var(--light-gray);
+    background-color: white;
 }
 
 .img {

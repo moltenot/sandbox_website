@@ -86,7 +86,7 @@ function GearList({title, list}) {
                 flex: "auto",
             }}>
                 <div style={{
-                    backgroundColor:"var(--light-gray)",
+                    backgroundColor: "var(--light-gray)",
                     margin: "5px",
                     padding: "1rem"
                 }}>
@@ -105,31 +105,31 @@ function GearList({title, list}) {
 export default function Gear() {
     return (
         <>
-            <Navigation>
-                <div className="cont-md">
-                    <p>Sandbox Studio is a recording facility in New Zealand that boasts an extensive collection of
-                        analogue recording equipment, including 150 microphones, 30 preamps, and 20 processors. The
-                        studio features renowned brands such as Neumann, Neve, SSL, Sony, Universal Audio, Focusrite,
-                        and Trident Audio Developments</p>
-                    <p>In addition to the impressive hardware, Sandbox Studio offers an online recording option through
-                        Source Connect, providing direct, latency-free hi-res stream connections to 50,000 studios
-                        worldwide. The studio is committed to supporting the local music scene and offers affordable
-                        artist and voiceover rates, as well as package deals. With Sandbox Studio, musicians can access
-                        sought-after recording equipment and technology that is not available elsewhere in New Zealand,
-                        while also receiving quality, affordable services.</p>
+            <header>
+                <title>Gear List · Sandbox Studios  </title>
+            </header>
+            <HeaderWithImage imageSrc={drumming} alt={"drumming"} headerText={"Gear List"}/>
 
+            <div className="cont-md">
+                <p>Sandbox Studio is a recording facility in New Zealand that boasts an extensive collection of
+                    analogue recording equipment, including 150 microphones, 30 preamps, and 20 processors. The
+                    studio features renowned brands such as Neumann, Neve, SSL, Sony, Universal Audio, Focusrite,
+                    and Trident Audio Developments</p>
+                <p>In addition to the impressive hardware, Sandbox Studio offers an online recording option through
+                    Source Connect, providing direct, latency-free hi-res stream connections to 50,000 studios
+                    worldwide. The studio is committed to supporting the local music scene and offers affordable
+                    artist and voiceover rates, as well as package deals. With Sandbox Studio, musicians can access
+                    sought-after recording equipment and technology that is not available elsewhere in New Zealand,
+                    while also receiving quality, affordable services.</p>
+            </div>
 
-                </div>
-                <HeaderWithImage imageSrc={drumming} alt={"drumming"} headerText={"HARDWARE"} />
-                <Grid width={400}>
-                    <GearList title="Microphones" list={HARDWARE.Microphones}/>
-                    <GearList title="Preamps" list={HARDWARE.Preamps}/>
-                    <GearList title="Compressors" list={HARDWARE.Compressors}/>
-                    <GearList title="Equalisers, De-essers & Saturators"
-                              list={HARDWARE["Equalisers, De-essers & Saturators"]}/>
-                </Grid>
-
-            </Navigation>
+            <Grid width={400}>
+                <GearList title="Microphones" list={HARDWARE.Microphones}/>
+                <GearList title="Preamps" list={HARDWARE.Preamps}/>
+                <GearList title="Compressors" list={HARDWARE.Compressors}/>
+                <GearList title="Equalisers, De-essers & Saturators"
+                          list={HARDWARE["Equalisers, De-essers & Saturators"]}/>
+            </Grid>
         </>
     );
 }
