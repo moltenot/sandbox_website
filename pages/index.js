@@ -18,6 +18,7 @@ import TallCard from "@/components/tallCard";
 import drums from "@/public/drums.jpg"
 import piano from "@/public/piano.jpg"
 import isoBooth from "@/public/iso_booth.jpg"
+import Head from "next/head";
 
 // import audio1 from "@/public/audio/bensound-adayout.mp3"
 // import audio2 from "@/public/audio/Corwin Trails - Pop.mp3"
@@ -58,9 +59,9 @@ export default function Home() {
     const sections = ["welcome", "people", "gear", "listen", "menu", "contact"]
     return (
         <>
-            <header>
+            <Head>
                 <title>Sandbox Studio</title>
-            </header>
+            </Head>
             <Navbar sections={sections}/>
             <Hero/>
             <section id="welcome">

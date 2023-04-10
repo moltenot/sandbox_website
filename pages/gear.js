@@ -3,6 +3,7 @@ import Grid from "@/components/grid";
 import HeaderWithImage from "@/components/sections/headerWithImage";
 
 import drumming from "@/public/drumming.jpg"
+import Head from "next/head";
 
 const INSTRUMETS = [
     {
@@ -105,9 +106,9 @@ function GearList({title, list}) {
 export default function Gear() {
     return (
         <>
-            <header>
+            <Head>
                 <title>Gear List · Sandbox Studios  </title>
-            </header>
+            </Head>
             <HeaderWithImage imageSrc={drumming} alt={"drumming"} headerText={"Gear List"}/>
 
             <div className="cont-md">
