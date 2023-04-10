@@ -1,30 +1,9 @@
-import Navigation from "@/components/navigation";
 import Grid from "@/components/grid";
 import HeaderWithImage from "@/components/sections/headerWithImage";
 
 import drumming from "@/public/drumming.jpg"
 import Head from "next/head";
 
-const INSTRUMETS = [
-    {
-        header: "Piano",
-    },
-    {
-        header: "Guitar",
-    },
-    {
-        header: "Drums",
-    }
-]
-
-const SOFTWARE = [
-    {
-        header: "DAW's",
-    },
-    {
-        header: "Plugins"
-    }
-]
 
 const HARDWARE = {
     "Microphones": [
